@@ -19,8 +19,8 @@ const Contact = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Anfrage gesendet!",
-        description: "Wir werden uns in Kürze bei Ihnen melden.",
+        title: "Zapytanie wysłane!",
+        description: "Wkrótce się z Tobą skontaktujemy.",
       });
       setIsSubmitting(false);
       (e.target as HTMLFormElement).reset();
@@ -38,7 +38,7 @@ const Contact = () => {
             </Link>
             <nav className="flex items-center gap-6">
               <Link to="/manufacturers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Hersteller
+                Producenci
               </Link>
               <Link to="/contact" className="text-sm font-medium text-foreground">
                 Kontakt
@@ -53,14 +53,14 @@ const Contact = () => {
         <div className="container mx-auto max-w-6xl">
           <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Zurück zur Startseite
+            Powrót do strony głównej
           </Link>
           <h1 className="text-5xl font-bold mb-6 text-foreground">
-            Kontakt & Beratung
+            Kontakt i konsultacje
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Wir unterstützen gewerbliche Kunden bei der Planung und Realisierung ihrer Einrichtungsprojekte. 
-            Kontaktieren Sie uns für eine persönliche Beratung.
+            Wspieramy klientów komercyjnych w planowaniu i realizacji projektów wyposażenia wnętrz. 
+            Skontaktuj się z nami, aby uzyskać osobistą konsultację.
           </p>
         </div>
       </section>
@@ -72,33 +72,33 @@ const Contact = () => {
             {/* Contact Form */}
             <Card className="shadow-[var(--shadow-medium)]">
               <CardHeader>
-                <CardTitle className="text-2xl">Beratungsanfrage</CardTitle>
+                <CardTitle className="text-2xl">Zapytanie o konsultację</CardTitle>
                 <CardDescription>
-                  Füllen Sie das Formular aus und wir melden uns zeitnah bei Ihnen. 
-                  <strong className="block mt-2 text-foreground">Nur für gewerbliche Kunden.</strong>
+                  Wypełnij formularz, a my skontaktujemy się z Tobą w najbliższym czasie. 
+                  <strong className="block mt-2 text-foreground">Tylko dla klientów komercyjnych.</strong>
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="firstname">Vorname *</Label>
+                      <Label htmlFor="firstname">Imię *</Label>
                       <Input id="firstname" name="firstname" required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastname">Nachname *</Label>
+                      <Label htmlFor="lastname">Nazwisko *</Label>
                       <Input id="lastname" name="lastname" required />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="company">Firma *</Label>
-                    <Input id="company" name="company" required placeholder="Ihr Firmenname" />
+                    <Input id="company" name="company" required placeholder="Nazwa Twojej firmy" />
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="email">E-Mail *</Label>
+                      <Label htmlFor="email">E-mail *</Label>
                       <Input id="email" name="email" type="email" required />
                     </div>
                     <div className="space-y-2">
@@ -108,23 +108,23 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="projectType">Art des Projekts *</Label>
+                    <Label htmlFor="projectType">Rodzaj projektu *</Label>
                     <Input 
                       id="projectType" 
                       name="projectType" 
                       required 
-                      placeholder="z.B. Büroeinrichtung, Konferenzraum, Restaurant"
+                      placeholder="np. wyposażenie biura, sala konferencyjna, restauracja"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Ihre Nachricht *</Label>
+                    <Label htmlFor="message">Twoja wiadomość *</Label>
                     <Textarea 
                       id="message" 
                       name="message" 
                       required 
                       rows={5}
-                      placeholder="Beschreiben Sie Ihr Projekt und wie wir Sie unterstützen können..."
+                      placeholder="Opisz swój projekt i jak możemy Ci pomóc..."
                     />
                   </div>
 
@@ -134,7 +134,7 @@ const Contact = () => {
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Wird gesendet..." : "Anfrage senden"}
+                    {isSubmitting ? "Wysyłanie..." : "Wyślij zapytanie"}
                   </Button>
                 </form>
               </CardContent>
@@ -144,7 +144,7 @@ const Contact = () => {
             <div className="space-y-8">
               <Card className="shadow-[var(--shadow-medium)]">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Kontaktinformationen</CardTitle>
+                  <CardTitle className="text-2xl">Informacje kontaktowe</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -152,11 +152,11 @@ const Contact = () => {
                       <MapPin className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1 text-foreground">Adresse</h3>
+                      <h3 className="font-semibold mb-1 text-foreground">Adres</h3>
                       <p className="text-muted-foreground">
                         Jaga Trendy<br />
                         ul. Chrobrego 78C<br />
-                        Gdańsk, Polen
+                        Gdańsk, Polska
                       </p>
                     </div>
                   </div>
@@ -166,7 +166,7 @@ const Contact = () => {
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1 text-foreground">E-Mail</h3>
+                      <h3 className="font-semibold mb-1 text-foreground">E-mail</h3>
                       <a 
                         href="mailto:gdansk@jagatrendy.pl" 
                         className="text-accent hover:underline"
@@ -183,8 +183,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold mb-1 text-foreground">Telefon</h3>
                       <p className="text-muted-foreground">
-                        Kontaktieren Sie uns per E-Mail<br />
-                        für Terminvereinbarungen
+                        Skontaktuj się z nami przez e-mail<br />
+                        aby umówić spotkanie
                       </p>
                     </div>
                   </div>
@@ -194,26 +194,26 @@ const Contact = () => {
               <Card className="shadow-[var(--shadow-medium)] bg-primary text-primary-foreground">
                 <CardHeader>
                   <Building2 className="w-10 h-10 mb-2" />
-                  <CardTitle className="text-2xl">Gewerbliche Kunden</CardTitle>
+                  <CardTitle className="text-2xl">Klienci komercyjni</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="opacity-90">
-                    Wir spezialisieren uns auf B2B-Projekte und bieten professionelle 
-                    Beratung, Planung und Umsetzung für Unternehmen, Büros, Hotels, 
-                    Restaurants und öffentliche Einrichtungen.
+                    Specjalizujemy się w projektach B2B i oferujemy profesjonalne 
+                    doradztwo, planowanie i realizację dla firm, biur, hoteli, 
+                    restauracji i obiektów publicznych.
                   </p>
                   <ul className="mt-4 space-y-2">
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                      Individuelle Projektplanung
+                      Indywidualne planowanie projektu
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                      Komplettlösungen aus einer Hand
+                      Kompleksowe rozwiązania z jednego źródła
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                      Langfristige Partnerschaft
+                      Długoterminowa współpraca
                     </li>
                   </ul>
                 </CardContent>

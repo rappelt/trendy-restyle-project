@@ -66,7 +66,7 @@ const Manufacturers = () => {
             </Link>
             <nav className="flex items-center gap-6">
               <Link to="/manufacturers" className="text-sm font-medium text-foreground">
-                Hersteller
+                Producenci
               </Link>
               <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Kontakt
@@ -81,14 +81,14 @@ const Manufacturers = () => {
         <div className="container mx-auto max-w-6xl">
           <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Zurück zur Startseite
+            Powrót do strony głównej
           </Link>
           <h1 className="text-5xl font-bold mb-6 text-foreground">
-            Unsere Hersteller
+            Nasi producenci
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Wir arbeiten ausschließlich mit renommierten Herstellern zusammen, 
-            die für höchste Qualität, innovatives Design und Langlebigkeit stehen.
+            Współpracujemy wyłącznie z renomowanymi producentami, 
+            którzy gwarantują najwyższą jakość, innowacyjny design i trwałość.
           </p>
         </div>
       </section>
@@ -126,7 +126,7 @@ const Manufacturers = () => {
                           size="sm"
                           className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
                         >
-                          Website besuchen
+                          Odwiedź stronę
                           <ExternalLink className="ml-2 h-4 w-4" />
                         </Button>
                       </a>
@@ -143,17 +143,17 @@ const Manufacturers = () => {
       <section className="py-16 px-4 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Benötigen Sie Unterstützung bei der Auswahl?
+            Potrzebujesz pomocy w wyborze?
           </h2>
           <p className="text-lg mb-8 opacity-90">
-            Unsere Experten beraten Sie gerne bei der Auswahl der passenden Möbel für Ihr Projekt.
+            Nasi eksperci chętnie doradzą przy wyborze odpowiednich mebli do Twojego projektu.
           </p>
           <Link to="/contact">
             <Button 
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-accent-foreground"
             >
-              Jetzt Beratung anfragen
+              Zapytaj o konsultację
             </Button>
           </Link>
         </div>

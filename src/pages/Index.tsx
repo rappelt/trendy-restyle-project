@@ -14,7 +14,7 @@ const Index = () => {
             <h1 className="text-2xl font-bold text-primary">Jaga Trendy</h1>
             <nav className="hidden md:flex items-center gap-6">
               <Link to="/manufacturers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Hersteller
+                Producenci
               </Link>
               <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Kontakt
@@ -28,11 +28,11 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Premium Büro- und Objektmöbel
+            Meble biurowe i obiektowe premium
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Hochwertige Möbellösungen für Büros, Konferenzräume, Gastronomie und mehr.
-            Ihr Partner für professionelle Einrichtungsprojekte.
+            Wysokiej jakości rozwiązania meblowe dla biur, sal konferencyjnych, gastronomii i innych obiektów.
+            Twój partner w profesjonalnych projektach wyposażenia wnętrz.
           </p>
         </div>
       </section>
@@ -41,7 +41,7 @@ const Index = () => {
       <section className="py-12 px-4">
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Wie können wir Ihnen helfen?
+            Jak możemy Ci pomóc?
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -53,22 +53,22 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/90 z-10" />
               <img 
                 src={heroOffice} 
-                alt="Büromöbel Showroom" 
+                alt="Salon mebli biurowych" 
                 className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 z-20 flex flex-col justify-end p-8">
                 <Building2 className="w-12 h-12 mb-4 text-primary-foreground" />
                 <h4 className="text-3xl font-bold mb-3 text-primary-foreground">
-                  Ich weiß, was ich brauche
+                  Wiem, czego potrzebuję
                 </h4>
                 <p className="text-lg mb-6 text-primary-foreground/90">
-                  Durchstöbern Sie unsere Premium-Hersteller und finden Sie die perfekten Möbel für Ihr Projekt.
+                  Przejrzyj naszych producentów premium i znajdź idealne meble do swojego projektu.
                 </p>
                 <Button 
                   size="lg" 
                   className="self-start bg-accent hover:bg-accent/90 text-accent-foreground group-hover:translate-x-2 transition-transform"
                 >
-                  Zu den Herstellern
+                  Do producentów
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -82,22 +82,22 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/90 z-10" />
               <img 
                 src={heroConsultation} 
-                alt="Beratungsgespräch" 
+                alt="Spotkanie konsultacyjne" 
                 className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 z-20 flex flex-col justify-end p-8">
                 <MessageCircle className="w-12 h-12 mb-4 text-primary-foreground" />
                 <h4 className="text-3xl font-bold mb-3 text-primary-foreground">
-                  Ich brauche Beratung
+                  Potrzebuję konsultacji
                 </h4>
                 <p className="text-lg mb-6 text-primary-foreground/90">
-                  Lassen Sie sich von unseren Experten beraten. Wir unterstützen gewerbliche Kunden bei jedem Projekt.
+                  Skorzystaj z doradztwa naszych ekspertów. Wspieramy klientów komercyjnych w każdym projekcie.
                 </p>
                 <Button 
                   size="lg" 
                   className="self-start bg-accent hover:bg-accent/90 text-accent-foreground group-hover:translate-x-2 transition-transform"
                 >
-                  Beratung anfragen
+                  Zapytaj o konsultację
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -110,34 +110,34 @@ const Index = () => {
       <section className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Warum Jaga Trendy?
+            Dlaczego Jaga Trendy?
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building2 className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-foreground">Premium Qualität</h4>
+              <h4 className="text-xl font-semibold mb-3 text-foreground">Jakość premium</h4>
               <p className="text-muted-foreground">
-                Ausgewählte Hersteller für höchste Ansprüche an Design und Funktionalität
+                Wyselekcjonowani producenci spełniający najwyższe standardy designu i funkcjonalności
               </p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MessageCircle className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-foreground">Persönliche Beratung</h4>
+              <h4 className="text-xl font-semibold mb-3 text-foreground">Osobiste doradztwo</h4>
               <p className="text-muted-foreground">
-                Individuelle Unterstützung von der Planung bis zur Umsetzung
+                Indywidualne wsparcie od planowania po realizację
               </p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ArrowRight className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-foreground">B2B Spezialist</h4>
+              <h4 className="text-xl font-semibold mb-3 text-foreground">Specjalista B2B</h4>
               <p className="text-muted-foreground">
-                Erfahrener Partner für gewerbliche Einrichtungsprojekte jeder Größe
+                Doświadczony partner dla komercyjnych projektów wyposażenia wnętrz każdej wielkości
               </p>
             </div>
           </div>
