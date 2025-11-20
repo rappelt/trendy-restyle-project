@@ -3,54 +3,67 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
+import lasLogo from "@/assets/logos/las.png";
+import wilkhahnLogo from "@/assets/logos/wilkhahn.png";
+import profimLogo from "@/assets/logos/profim.png";
+import bejotLogo from "@/assets/logos/bejot.png";
+import aliasLogo from "@/assets/logos/alias.png";
+import softlineLogo from "@/assets/logos/softline.png";
+import pagedLogo from "@/assets/logos/paged.png";
+import tonLogo from "@/assets/logos/ton.png";
+import infinityLogo from "@/assets/logos/infinity.png";
+import pedraliLogo from "@/assets/logos/pedrali.png";
+import magisLogo from "@/assets/logos/magis.png";
+import plustLogo from "@/assets/logos/plust.png";
+import thonetLogo from "@/assets/logos/thonet.png";
 
 const manufacturers = [
   {
     category: "Meble Biurowe",
     brands: [
-      { name: "LAS", url: "http://las.it/", logo: "https://jagatrendy.pl/images/las.png" }
+      { name: "LAS", url: "http://las.it/", logo: lasLogo }
     ]
   },
   {
     category: "Krzesła i Fotele Biurowe Premium",
     brands: [
-      { name: "Wilkhahn", url: "https://www.wilkhahn.com/en/", logo: "https://jagatrendy.pl/images/Wilkhahn.png" }
+      { name: "Wilkhahn", url: "https://www.wilkhahn.com/en/", logo: wilkhahnLogo }
     ]
   },
   {
     category: "Krzesła i Fotele Biurowe",
     brands: [
-      { name: "Profim", url: "https://www.profim.pl/", logo: "https://jagatrendy.pl/images/profim.png" },
-      { name: "Bejot", url: "http://www.bejot.eu/", logo: "https://jagatrendy.pl/images/bejot.png" }
+      { name: "Profim", url: "https://www.profim.pl/", logo: profimLogo },
+      { name: "Bejot", url: "http://www.bejot.eu/", logo: bejotLogo }
     ]
   },
   {
     category: "Sofy",
     brands: [
-      { name: "Alias", url: "http://alias.design/", logo: "https://jagatrendy.pl/images/alias.png" },
-      { name: "Softline", url: "http://www.softline.dk/", logo: "https://jagatrendy.pl/images/softline.png" }
+      { name: "Alias", url: "http://alias.design/", logo: aliasLogo },
+      { name: "Softline", url: "http://www.softline.dk/", logo: softlineLogo }
     ]
   },
   {
     category: "Krzesła Drewniane",
     brands: [
-      { name: "Paged", url: "https://www.pagedmeble.pl/pl/", logo: "https://jagatrendy.pl/images/paged.png" },
-      { name: "TON", url: "https://www.ton.eu/pl/krzesla/", logo: "https://jagatrendy.pl/images/ton.png" }
+      { name: "Paged", url: "https://www.pagedmeble.pl/pl/", logo: pagedLogo },
+      { name: "TON", url: "https://www.ton.eu/pl/krzesla/", logo: tonLogo }
     ]
   },
   {
     category: "Kawiarnia / Restauracja",
     brands: [
-      { name: "Infinity", url: "https://infinityoffice.com.au/", logo: "https://jagatrendy.pl/images/infinity.png" },
-      { name: "Pedrali", url: "https://www.pedrali.it/it/", logo: "https://jagatrendy.pl/images/pedrali.png" },
-      { name: "Magis", url: "http://www.magisdesign.com/", logo: "https://jagatrendy.pl/images/magis.png" },
-      { name: "Plust", url: "https://www.plust.it/en/products/", logo: "https://jagatrendy.pl/images/plus.png" }
+      { name: "Infinity", url: "https://infinityoffice.com.au/", logo: infinityLogo },
+      { name: "Pedrali", url: "https://www.pedrali.it/it/", logo: pedraliLogo },
+      { name: "Magis", url: "http://www.magisdesign.com/", logo: magisLogo },
+      { name: "Plust", url: "https://www.plust.it/en/products/", logo: plustLogo }
     ]
   },
   {
     category: "Sale Konferencyjne",
     brands: [
-      { name: "Thonet", url: "https://www.thonet.com/", logo: "https://jagatrendy.pl/images/thonet.png" }
+      { name: "Thonet", url: "https://www.thonet.com/", logo: thonetLogo }
     ]
   }
 ];
