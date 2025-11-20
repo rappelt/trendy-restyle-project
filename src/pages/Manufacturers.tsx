@@ -3,6 +3,7 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
+import { useLanguage } from "@/contexts/LanguageContext";
 import lasLogo from "@/assets/logos/las.png";
 import wilkhahnLogo from "@/assets/logos/wilkhahn.png";
 import profimLogo from "@/assets/logos/profim.png";
@@ -69,6 +70,8 @@ const manufacturers = [
 ];
 
 const Manufacturers = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -78,14 +81,13 @@ const Manufacturers = () => {
         <div className="container mx-auto max-w-6xl">
           <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Powrót do strony głównej
+            {t('common.backToHome')}
           </Link>
           <h1 className="text-5xl font-bold mb-6 text-foreground">
-            Nasi producenci
+            {t('manufacturers.title')}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Współpracujemy wyłącznie z renomowanymi producentami, 
-            którzy gwarantują najwyższą jakość, innowacyjny design i trwałość.
+            {t('manufacturers.subtitle')}
           </p>
         </div>
       </section>
@@ -123,7 +125,7 @@ const Manufacturers = () => {
                           size="sm"
                           className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
                         >
-                          Odwiedź stronę
+                          {t('manufacturers.visitWebsite')}
                           <ExternalLink className="ml-2 h-4 w-4" />
                         </Button>
                       </a>
@@ -140,17 +142,17 @@ const Manufacturers = () => {
       <section className="py-16 px-4 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Potrzebujesz pomocy w wyborze?
+            {t('manufacturers.needHelp')}
           </h2>
           <p className="text-lg mb-8 opacity-90">
-            Nasi eksperci chętnie doradzą przy wyborze odpowiednich mebli do Twojego projektu.
+            {t('manufacturers.needHelpDesc')}
           </p>
           <Link to="/contact">
             <Button 
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-accent-foreground"
             >
-              Zapytaj o konsultację
+              {t('home.askForConsultation')}
             </Button>
           </Link>
         </div>
@@ -160,7 +162,7 @@ const Manufacturers = () => {
       <footer className="bg-primary text-primary-foreground py-8 px-4">
         <div className="container mx-auto text-center">
           <p className="text-sm">
-            Jaga Trendy - Gdańsk, ul. Chrobrego 78C
+            Jaga Trendy - Gdańsk, ul. Chrobrego 78F
           </p>
           <p className="text-sm mt-2 opacity-80">
             gdansk@jagatrendy.pl

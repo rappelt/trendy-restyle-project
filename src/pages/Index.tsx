@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Building2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroOffice from "@/assets/hero-office.jpg";
 import heroConsultation from "@/assets/hero-consultation.jpg";
 
 const Index = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -14,11 +16,10 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Meble biurowe i obiektowe premium
+            {t('home.heroTitle')}
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Wysokiej jakości rozwiązania meblowe dla biur, sal konferencyjnych, gastronomii i innych obiektów.
-            Twój partner w profesjonalnych projektach wyposażenia wnętrz.
+            {t('home.heroSubtitle')}
           </p>
         </div>
       </section>
@@ -27,7 +28,7 @@ const Index = () => {
       <section className="py-12 px-4">
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Jak możemy Ci pomóc?
+            {t('home.howCanWeHelp')}
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -45,16 +46,16 @@ const Index = () => {
               <div className="absolute inset-0 z-20 flex flex-col justify-end p-8">
                 <Building2 className="w-12 h-12 mb-4 text-primary-foreground" />
                 <h4 className="text-3xl font-bold mb-3 text-primary-foreground">
-                  Bezpośrednio do naszych partnerów premium
+                  {t('home.directToPartners')}
                 </h4>
                 <p className="text-lg mb-6 text-primary-foreground/90">
-                  Przejrzyj naszych producentów premium i znajdź idealne meble do swojego projektu.
+                  {t('home.directToPartnersDesc')}
                 </p>
                 <Button 
                   size="lg" 
                   className="self-start bg-accent hover:bg-accent/90 text-accent-foreground group-hover:translate-x-2 transition-transform"
                 >
-                  Do producentów
+                  {t('home.toManufacturers')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -74,16 +75,16 @@ const Index = () => {
               <div className="absolute inset-0 z-20 flex flex-col justify-end p-8">
                 <MessageCircle className="w-12 h-12 mb-4 text-primary-foreground" />
                 <h4 className="text-3xl font-bold mb-3 text-primary-foreground">
-                  Potrzebuję konsultacji
+                  {t('home.needConsultation')}
                 </h4>
                 <p className="text-lg mb-6 text-primary-foreground/90">
-                  Skorzystaj z doradztwa naszych ekspertów. Wspieramy klientów komercyjnych w każdym projekcie.
+                  {t('home.needConsultationDesc')}
                 </p>
                 <Button 
                   size="lg" 
                   className="self-start bg-accent hover:bg-accent/90 text-accent-foreground group-hover:translate-x-2 transition-transform"
                 >
-                  Zapytaj o konsultację
+                  {t('home.askForConsultation')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -96,34 +97,34 @@ const Index = () => {
       <section className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Dlaczego Jaga Trendy?
+            {t('home.whyJagaTrendy')}
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building2 className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-foreground">Jakość premium</h4>
+              <h4 className="text-xl font-semibold mb-3 text-foreground">{t('home.premiumQuality')}</h4>
               <p className="text-muted-foreground">
-                Wyselekcjonowani producenci spełniający najwyższe standardy designu i funkcjonalności
+                {t('home.premiumQualityDesc')}
               </p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MessageCircle className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-foreground">Osobiste doradztwo</h4>
+              <h4 className="text-xl font-semibold mb-3 text-foreground">{t('home.personalAdvice')}</h4>
               <p className="text-muted-foreground">
-                Indywidualne wsparcie od planowania po realizację
+                {t('home.personalAdviceDesc')}
               </p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ArrowRight className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-foreground">Specjalista B2B</h4>
+              <h4 className="text-xl font-semibold mb-3 text-foreground">{t('home.b2bSpecialist')}</h4>
               <p className="text-muted-foreground">
-                Doświadczony partner dla komercyjnych projektów wyposażenia wnętrz każdej wielkości
+                {t('home.b2bSpecialistDesc')}
               </p>
             </div>
           </div>
