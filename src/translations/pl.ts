@@ -6,7 +6,7 @@ export const pl = {
   },
   home: {
     heroTitle: 'Meble biurowe i obiektowe premium',
-    heroSubtitle: 'Wysokiej jakości rozwiązania meblowe dla biur, sal konferencyjnych, gastronomii i innych obiektów. Twój partner w profesjonalnych projektach wyposażenia wnętrz.',
+    heroSubtitle: 'Wysokiej jakości rozwiązania meblowe dla biur, sal konferencyjnych, gastronomii, hoteli i innych obiektów. Twój partner w profesjonalnych projektach wyposażenia wnętrz.',
     howCanWeHelp: 'Jak możemy Ci pomóc?',
     directToPartners: 'Bezpośrednio do naszych partnerów premium',
     directToPartnersDesc: 'Przejrzyj naszych producentów premium i znajdź idealne meble do swojego projektu.',
