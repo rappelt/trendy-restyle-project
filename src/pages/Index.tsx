@@ -45,7 +45,7 @@ const Index = () => {
               <div className="absolute inset-0 z-20 flex flex-col justify-end p-8">
                 <Building2 className="w-12 h-12 mb-4 text-primary-foreground" />
                 <h4 className="text-3xl font-bold mb-3 text-primary-foreground">
-                  Wiem, czego potrzebuję
+                  Bezpośrednio do naszych partnerów premium
                 </h4>
                 <p className="text-lg mb-6 text-primary-foreground/90">
                   Przejrzyj naszych producentów premium i znajdź idealne meble do swojego projektu.
