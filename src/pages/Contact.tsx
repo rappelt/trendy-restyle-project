@@ -8,9 +8,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import Header from "@/components/Header";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,8 +22,8 @@ const Contact = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Zapytanie wysłane!",
-        description: "Wkrótce się z Tobą skontaktujemy.",
+        title: t('contact.successTitle'),
+        description: t('contact.successDesc'),
       });
       setIsSubmitting(false);
       (e.target as HTMLFormElement).reset();
@@ -37,14 +39,13 @@ const Contact = () => {
         <div className="container mx-auto max-w-6xl">
           <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Powrót do strony głównej
+            {t('common.backToHome')}
           </Link>
           <h1 className="text-5xl font-bold mb-6 text-foreground">
-            Kontakt i konsultacje
+            {t('contact.title')}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Wspieramy klientów komercyjnych w planowaniu i realizacji projektów wyposażenia wnętrz. 
-            Skontaktuj się z nami, aby uzyskać osobistą konsultację.
+            {t('contact.subtitle')}
           </p>
         </div>
       </section>
@@ -56,59 +57,59 @@ const Contact = () => {
             {/* Contact Form */}
             <Card className="shadow-[var(--shadow-medium)]">
               <CardHeader>
-                <CardTitle className="text-2xl">Zapytanie o konsultację</CardTitle>
+                <CardTitle className="text-2xl">{t('contact.formTitle')}</CardTitle>
                 <CardDescription>
-                  Wypełnij formularz, a my skontaktujemy się z Tobą w najbliższym czasie. 
-                  <strong className="block mt-2 text-foreground">Tylko dla klientów komercyjnych.</strong>
+                  {t('contact.formDesc')}
+                  <strong className="block mt-2 text-foreground">{t('contact.commercialOnly')}</strong>
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="firstname">Imię *</Label>
+                      <Label htmlFor="firstname">{t('contact.firstName')} {t('common.required')}</Label>
                       <Input id="firstname" name="firstname" required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastname">Nazwisko *</Label>
+                      <Label htmlFor="lastname">{t('contact.lastName')} {t('common.required')}</Label>
                       <Input id="lastname" name="lastname" required />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="company">Firma *</Label>
-                    <Input id="company" name="company" required placeholder="Nazwa Twojej firmy" />
+                    <Label htmlFor="company">{t('contact.company')} {t('common.required')}</Label>
+                    <Input id="company" name="company" required placeholder={t('contact.companyPlaceholder')} />
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="email">E-mail *</Label>
+                      <Label htmlFor="email">{t('contact.email')} {t('common.required')}</Label>
                       <Input id="email" name="email" type="email" required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Telefon</Label>
+                      <Label htmlFor="phone">{t('contact.phone')}</Label>
                       <Input id="phone" name="phone" type="tel" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="projectType">Rodzaj projektu *</Label>
+                    <Label htmlFor="projectType">{t('contact.projectType')} {t('common.required')}</Label>
                     <Input 
                       id="projectType" 
                       name="projectType" 
                       required 
-                      placeholder="np. wyposażenie biura, sala konferencyjna, restauracja"
+                      placeholder={t('contact.projectTypePlaceholder')}
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Twoja wiadomość *</Label>
+                    <Label htmlFor="message">{t('contact.message')} {t('common.required')}</Label>
                     <Textarea 
                       id="message" 
                       name="message" 
                       required 
                       rows={5}
-                      placeholder="Opisz swój projekt i jak możemy Ci pomóc..."
+                      placeholder={t('contact.messagePlaceholder')}
                     />
                   </div>
 
@@ -118,7 +119,7 @@ const Contact = () => {
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Wysyłanie..." : "Wyślij zapytanie"}
+                    {isSubmitting ? t('contact.submitting') : t('contact.submit')}
                   </Button>
                 </form>
               </CardContent>
@@ -128,7 +129,7 @@ const Contact = () => {
             <div className="space-y-8">
               <Card className="shadow-[var(--shadow-medium)]">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Informacje kontaktowe</CardTitle>
+                  <CardTitle className="text-2xl">{t('contact.contactInfo')}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -136,10 +137,10 @@ const Contact = () => {
                       <MapPin className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1 text-foreground">Adres</h3>
+                      <h3 className="font-semibold mb-1 text-foreground">{t('contact.address')}</h3>
                       <p className="text-muted-foreground">
                         Jaga Trendy<br />
-                        ul. Chrobrego 78C<br />
+                        ul. Chrobrego 78F<br />
                         Gdańsk, Polska
                       </p>
                     </div>
@@ -150,7 +151,7 @@ const Contact = () => {
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1 text-foreground">E-mail</h3>
+                      <h3 className="font-semibold mb-1 text-foreground">{t('contact.email')}</h3>
                       <a 
                         href="mailto:gdansk@jagatrendy.pl" 
                         className="text-accent hover:underline"
@@ -165,10 +166,9 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1 text-foreground">Telefon</h3>
+                      <h3 className="font-semibold mb-1 text-foreground">{t('contact.phone')}</h3>
                       <p className="text-muted-foreground">
-                        Skontaktuj się z nami przez e-mail<br />
-                        aby umówić spotkanie
+                        {t('contact.phoneDesc')}
                       </p>
                     </div>
                   </div>
@@ -178,26 +178,24 @@ const Contact = () => {
               <Card className="shadow-[var(--shadow-medium)] bg-primary text-primary-foreground">
                 <CardHeader>
                   <Building2 className="w-10 h-10 mb-2" />
-                  <CardTitle className="text-2xl">Klienci komercyjni</CardTitle>
+                  <CardTitle className="text-2xl">{t('contact.commercial')}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="opacity-90">
-                    Specjalizujemy się w projektach B2B i oferujemy profesjonalne 
-                    doradztwo, planowanie i realizację dla firm, biur, hoteli, 
-                    restauracji i obiektów publicznych.
+                    {t('contact.commercialDesc')}
                   </p>
                   <ul className="mt-4 space-y-2">
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                      Indywidualne planowanie projektu
+                      {t('contact.planning')}
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                      Kompleksowe rozwiązania z jednego źródła
+                      {t('contact.comprehensive')}
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                      Długoterminowa współpraca
+                      {t('contact.longterm')}
                     </li>
                   </ul>
                 </CardContent>
@@ -211,7 +209,7 @@ const Contact = () => {
       <footer className="bg-primary text-primary-foreground py-8 px-4 mt-12">
         <div className="container mx-auto text-center">
           <p className="text-sm">
-            Jaga Trendy - Gdańsk, ul. Chrobrego 78C
+            Jaga Trendy - Gdańsk, ul. Chrobrego 78F
           </p>
           <p className="text-sm mt-2 opacity-80">
             gdansk@jagatrendy.pl
