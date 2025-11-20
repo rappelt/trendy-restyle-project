@@ -10,6 +10,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+  // Default language is Polish
   const [language, setLanguage] = useState<Language>('pl');
 
   const t = (key: string): string => {
