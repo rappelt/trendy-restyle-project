@@ -98,14 +98,14 @@ const Manufacturers = () => {
               <h2 className="text-3xl font-bold text-foreground border-b border-border pb-3">
                 {category.category}
               </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.brands.map((brand, brandIdx) => (
                   <Card 
                     key={brandIdx} 
                     className="group hover:shadow-[var(--shadow-medium)] transition-all duration-300 overflow-hidden"
                   >
-                    <CardContent className="p-8 flex flex-col items-center justify-center min-h-[240px]">
-                      <div className="mb-6 w-full h-24 flex items-center justify-center">
+                    <CardContent className="p-6 md:p-8 flex flex-col items-center justify-center min-h-[280px] md:min-h-[240px]">
+                      <div className="mb-6 w-full h-32 md:h-24 flex items-center justify-center">
                         <img 
                           src={brand.logo} 
                           alt={brand.name}
