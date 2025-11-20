@@ -6,7 +6,7 @@ export const en = {
   },
   home: {
     heroTitle: 'Premium office and contract furniture',
-    heroSubtitle: 'High-quality furniture solutions for offices, conference rooms, hospitality and other facilities. Your partner in professional interior projects.',
+    heroSubtitle: 'High-quality furniture solutions for offices, conference rooms, hospitality, hotels and other facilities. Your partner in professional interior projects.',
     howCanWeHelp: 'How can we help you?',
     directToPartners: 'Directly to our premium partners',
     directToPartnersDesc: 'Browse our premium manufacturers and find the perfect furniture for your project.',
