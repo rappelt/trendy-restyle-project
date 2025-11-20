@@ -162,7 +162,7 @@ const Manufacturers = () => {
       <footer className="bg-primary text-primary-foreground py-8 px-4">
         <div className="container mx-auto text-center">
           <p className="text-sm">
-            Jaga Trendy - Gdańsk, ul. Chrobrego 78F
+            Jaga Trendy - Gdańsk, ul. Chrobrego 79F
           </p>
           <p className="text-sm mt-2 opacity-80">
             gdansk@jagatrendy.pl

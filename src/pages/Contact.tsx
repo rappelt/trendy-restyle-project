@@ -140,7 +140,7 @@ const Contact = () => {
                       <h3 className="font-semibold mb-1 text-foreground">{t('contact.address')}</h3>
                       <p className="text-muted-foreground">
                         Jaga Trendy<br />
-                        ul. Chrobrego 78F<br />
+                        ul. Chrobrego 79F<br />
                         Gdańsk, Polska
                       </p>
                     </div>
@@ -209,7 +209,7 @@ const Contact = () => {
       <footer className="bg-primary text-primary-foreground py-8 px-4 mt-12">
         <div className="container mx-auto text-center">
           <p className="text-sm">
-            Jaga Trendy - Gdańsk, ul. Chrobrego 78F
+            Jaga Trendy - Gdańsk, ul. Chrobrego 79F
           </p>
           <p className="text-sm mt-2 opacity-80">
             gdansk@jagatrendy.pl
