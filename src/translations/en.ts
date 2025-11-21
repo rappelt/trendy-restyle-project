@@ -28,6 +28,15 @@ export const en = {
     visitWebsite: 'Visit website',
     needHelp: 'Need help choosing?',
     needHelpDesc: 'Our experts are happy to advise you on choosing the right furniture for your project.',
+    categories: {
+      officeFurniture: 'Office Furniture',
+      officeChairsPremium: 'Premium Office Chairs and Armchairs',
+      officeChairs: 'Office Chairs and Armchairs',
+      sofas: 'Sofas',
+      woodenChairs: 'Wooden Chairs',
+      cafeRestaurant: 'Café / Restaurant',
+      conferenceRooms: 'Conference Rooms',
+    },
   },
   contact: {
     title: 'Contact and consultations',

@@ -28,6 +28,15 @@ export const pl = {
     visitWebsite: 'Odwiedź stronę',
     needHelp: 'Potrzebujesz pomocy w wyborze?',
     needHelpDesc: 'Nasi eksperci chętnie doradzą przy wyborze odpowiednich mebli do Twojego projektu.',
+    categories: {
+      officeFurniture: 'Meble Biurowe',
+      officeChairsPremium: 'Krzesła i Fotele Biurowe Premium',
+      officeChairs: 'Krzesła i Fotele Biurowe',
+      sofas: 'Sofy',
+      woodenChairs: 'Krzesła Drewniane',
+      cafeRestaurant: 'Kawiarnia / Restauracja',
+      conferenceRooms: 'Sale Konferencyjne',
+    },
   },
   contact: {
     title: 'Kontakt i konsultacje',
