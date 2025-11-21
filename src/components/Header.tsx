@@ -17,9 +17,9 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-          <img src={logo} alt="Jaga Trendy" className="h-12" />
+          <img src={logo} alt="Jaga Trendy" className="h-14 sm:h-12" />
         </Link>
         
         <div className="flex items-center gap-4">
@@ -49,8 +49,8 @@ const Header = () => {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-2">
-                <Languages className="h-4 w-4" />
+              <Button variant="outline" size="sm" className="gap-2 h-9 sm:h-10">
+                <Languages className="h-5 w-5 sm:h-4 sm:w-4" />
                 <span className="hidden sm:inline">{languageNames[language]}</span>
               </Button>
             </DropdownMenuTrigger>
