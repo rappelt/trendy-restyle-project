@@ -20,40 +20,40 @@ import thonetLogo from "@/assets/logos/thonet.png";
 
 const manufacturers = [
   {
-    category: "Meble Biurowe",
+    categoryKey: "officeFurniture",
     brands: [
       { name: "LAS", url: "http://las.it/", logo: lasLogo }
     ]
   },
   {
-    category: "Krzesła i Fotele Biurowe Premium",
+    categoryKey: "officeChairsPremium",
     brands: [
       { name: "Wilkhahn", url: "https://www.wilkhahn.com/en/", logo: wilkhahnLogo }
     ]
   },
   {
-    category: "Krzesła i Fotele Biurowe",
+    categoryKey: "officeChairs",
     brands: [
       { name: "Profim", url: "https://www.profim.pl/", logo: profimLogo },
       { name: "Bejot", url: "http://www.bejot.eu/", logo: bejotLogo }
     ]
   },
   {
-    category: "Sofy",
+    categoryKey: "sofas",
     brands: [
       { name: "Alias", url: "http://alias.design/", logo: aliasLogo },
       { name: "Softline", url: "http://www.softline.dk/", logo: softlineLogo }
     ]
   },
   {
-    category: "Krzesła Drewniane",
+    categoryKey: "woodenChairs",
     brands: [
       { name: "Paged", url: "https://www.pagedmeble.pl/pl/", logo: pagedLogo },
       { name: "TON", url: "https://www.ton.eu/pl/krzesla/", logo: tonLogo }
     ]
   },
   {
-    category: "Kawiarnia / Restauracja",
+    categoryKey: "cafeRestaurant",
     brands: [
       { name: "Infinity", url: "https://infinityoffice.com.au/", logo: infinityLogo },
       { name: "Pedrali", url: "https://www.pedrali.it/it/", logo: pedraliLogo },
@@ -62,7 +62,7 @@ const manufacturers = [
     ]
   },
   {
-    category: "Sale Konferencyjne",
+    categoryKey: "conferenceRooms",
     brands: [
       { name: "Thonet", url: "https://www.thonet.com/", logo: thonetLogo }
     ]
@@ -98,7 +98,7 @@ const Manufacturers = () => {
           {manufacturers.map((category, idx) => (
             <div key={idx} className="space-y-6">
               <h2 className="text-3xl font-bold text-foreground border-b border-border pb-3">
-                {category.category}
+                {t(`manufacturers.categories.${category.categoryKey}`)}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.brands.map((brand, brandIdx) => (
