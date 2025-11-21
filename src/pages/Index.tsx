@@ -37,18 +37,18 @@ const Index = () => {
               to="/manufacturers"
               className="group relative overflow-hidden rounded-2xl shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-large)] transition-all duration-500"
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/90 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80 z-10" />
               <img 
                 src={heroOffice} 
                 alt="Salon mebli biurowych" 
                 className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 z-20 flex flex-col justify-end p-8">
-                <Building2 className="w-12 h-12 mb-4 text-primary-foreground" />
-                <h4 className="text-3xl font-bold mb-3 text-primary-foreground">
+                <Building2 className="w-12 h-12 mb-4 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" />
+                <h4 className="text-3xl font-bold mb-3 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                   {t('home.directToPartners')}
                 </h4>
-                <p className="text-lg mb-6 text-primary-foreground/90">
+                <p className="text-lg mb-6 text-white/95 drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
                   {t('home.directToPartnersDesc')}
                 </p>
                 <Button 
@@ -66,18 +66,18 @@ const Index = () => {
               to="/contact"
               className="group relative overflow-hidden rounded-2xl shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-large)] transition-all duration-500"
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/90 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80 z-10" />
               <img 
                 src={heroConsultation} 
                 alt="Spotkanie konsultacyjne" 
                 className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 z-20 flex flex-col justify-end p-8">
-                <MessageCircle className="w-12 h-12 mb-4 text-primary-foreground" />
-                <h4 className="text-3xl font-bold mb-3 text-primary-foreground">
+                <MessageCircle className="w-12 h-12 mb-4 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" />
+                <h4 className="text-3xl font-bold mb-3 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                   {t('home.needConsultation')}
                 </h4>
-                <p className="text-lg mb-6 text-primary-foreground/90">
+                <p className="text-lg mb-6 text-white/95 drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
                   {t('home.needConsultationDesc')}
                 </p>
                 <Button 
