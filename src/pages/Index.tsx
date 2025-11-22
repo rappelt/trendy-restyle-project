@@ -24,20 +24,6 @@ const Index = () => {
           <p className="text-sm sm:text-base text-muted-foreground/80 mb-8 sm:mb-12 max-w-2xl mx-auto">
             {t('home.heroSubline')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" className="w-full sm:w-auto">
-              <Link to="/manufacturers">
-                {t('home.discoverManufacturers')}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <Link to="/contact">
-                {t('home.requestProject')}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
