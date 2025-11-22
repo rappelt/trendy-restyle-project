@@ -1,5 +1,5 @@
 // src/components/Footer.tsx
-const Footer = () => {
+const footer = () => {
   const year = new Date().getFullYear();
 
   return (
@@ -17,4 +17,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default footer;
