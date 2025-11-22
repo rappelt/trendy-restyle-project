@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Building2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
-import footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroOffice from "@/assets/hero-office.jpg";
 import heroConsultation from "@/assets/hero-consultation.jpg";
@@ -212,7 +212,7 @@ const Index = () => {
         </section>
       </main>
 
-      <footer />
+      <Footer />
     </div>
   );
 };

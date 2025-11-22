@@ -70,6 +70,15 @@ export const de = {
     longterm: 'Langfristige Zusammenarbeit',
     phoneDesc: 'Kontaktieren Sie uns per E-Mail, um einen Termin zu vereinbaren',
   },
+  footer: {
+  imprint: "Impressum",
+  privacy: "Datenschutzerklärung",
+  trademark: "Markenrechtlicher Hinweis",
+  allRightsReserved: "Alle Rechte vorbehalten.",
+  trademarkNotice:
+    "Alle genannten Marken und Logos sind eingetragene Warenzeichen ihrer jeweiligen Eigentümer.",
+},
+
   common: {
     backToHome: 'Zurück zur Startseite',
     required: '*',

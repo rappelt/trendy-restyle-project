@@ -70,6 +70,15 @@ export const pl = {
     longterm: 'Długoterminowa współpraca',
     phoneDesc: 'Skontaktuj się z nami przez e-mail aby umówić spotkanie',
   },
+  footer: {
+  imprint: "Impressum / Dane firmy",
+  privacy: "Polityka prywatności",
+  trademark: "Informacja o znakach towarowych",
+  allRightsReserved: "Wszelkie prawa zastrzeżone.",
+  trademarkNotice:
+    "Wszystkie wymienione marki i logotypy są zarejestrowanymi znakami towarowymi ich właścicieli.",
+},
+
   common: {
     backToHome: 'Powrót do strony głównej',
     required: '*',

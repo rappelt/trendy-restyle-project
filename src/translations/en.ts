@@ -70,6 +70,15 @@ export const en = {
     longterm: 'Long-term cooperation',
     phoneDesc: 'Contact us by email to schedule a meeting',
   },
+  footer: {
+  imprint: "Imprint",
+  privacy: "Privacy Policy",
+  trademark: "Trademark Notice",
+  allRightsReserved: "All rights reserved.",
+  trademarkNotice:
+    "All mentioned brands and logos are registered trademarks of their respective owners.",
+},
+
   common: {
     backToHome: 'Back to home',
     required: '*',
