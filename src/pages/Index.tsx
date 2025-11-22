@@ -1,11 +1,40 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Building2, MessageCircle } from "lucide-react";
+import { ArrowRight, Building2, MessageCircle, Layers, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
-import footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroOffice from "@/assets/hero-office.jpg";
 import heroConsultation from "@/assets/hero-consultation.jpg";
+import { useEffect, useState } from "react";
+
+const CountUp: React.FC<{ value: number; duration?: number }> = ({
+  value,
+  duration = 1200,
+}) => {
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    let start: number | null = null;
+
+    const step = (timestamp: number) => {
+      if (start === null) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const current = Math.round(progress * value);
+      setDisplay(current);
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  }, [value, duration]);
+
+  return <span>{display.toLocaleString()}</span>;
+};
+
+
 
 const Index = () => {
   const { t } = useLanguage();
@@ -250,12 +279,13 @@ const Index = () => {
           </div>
         </section>
 
-          {/* Proof of Trust / Vertrauen & Erfahrung */}
-        <section className="border-t border-border bg-background">
-          <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20">
+
+        {/* Proof of Trust / Kennzahlen */}
+        <section className="border-t border-border bg-background/60">
+          <div className="container mx-auto px-4 py-14 sm:py-16 lg:py-20">
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
               <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                {t("home.trustLabel")}
+                {t("home.trustHeading")}
               </p>
               <h2 className="text-2xl sm:text-3xl font-semibold">
                 {t("home.trustTitle")}
@@ -265,61 +295,49 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Stats */}
             <div className="grid gap-4 sm:gap-6 md:grid-cols-3 max-w-5xl mx-auto">
-              <div className="rounded-2xl border border-border bg-muted/30 p-5 sm:p-6">
+              {/* Stat 1 */}
+              <div className="rounded-3xl border border-white/10 bg-background/60 backdrop-blur-xl p-5 sm:p-6 shadow-[0_18px_60px_rgba(15,23,42,0.45)] text-center flex flex-col items-center">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-secondary/70 to-secondary/20">
+                  <Building2 className="h-5 w-5" />
+                </div>
                 <p className="text-2xl sm:text-3xl font-semibold">
-                  {t("home.trustStatProjectsValue")}
+                  <CountUp value={50} />+
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {t("home.trustStatProjects")}
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-border bg-muted/30 p-5 sm:p-6">
+              {/* Stat 2 */}
+              <div className="rounded-3xl border border-white/10 bg-background/60 backdrop-blur-xl p-5 sm:p-6 shadow-[0_18px_60px_rgba(15,23,42,0.45)] text-center flex flex-col items-center">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-secondary/70 to-secondary/20">
+                  <Layers className="h-5 w-5" />
+                </div>
                 <p className="text-2xl sm:text-3xl font-semibold">
-                  {t("home.trustStatSectorsValue")}
+                  <CountUp value={5} />+
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {t("home.trustStatSectors")}
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-border bg-muted/30 p-5 sm:p-6">
+              {/* Stat 3 */}
+              <div className="rounded-3xl border border-white/10 bg-background/60 backdrop-blur-xl p-5 sm:p-6 shadow-[0_18px_60px_rgba(15,23,42,0.45)] text-center flex flex-col items-center">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-secondary/70 to-secondary/20">
+                  <Sparkles className="h-5 w-5" />
+                </div>
                 <p className="text-2xl sm:text-3xl font-semibold">
-                  {t("home.trustStatManufacturersValue")}
+                  <CountUp value={20} />+
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {t("home.trustStatManufacturers")}
                 </p>
               </div>
             </div>
-
-            {/* Trusted by / Logos / Marken */}
-            <div className="mt-10 max-w-5xl mx-auto">
-              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                {t("home.trustTrustedBy")}
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2 sm:gap-3">
-                <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs sm:text-sm text-muted-foreground">
-                  Hospitality · Hotelprojekte
-                </span>
-                <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs sm:text-sm text-muted-foreground">
-                  Gastronomie &amp; Café-Konzepte
-                </span>
-                <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs sm:text-sm text-muted-foreground">
-                  Office &amp; Meetingräume
-                </span>
-                <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs sm:text-sm text-muted-foreground">
-                  Retail &amp; Showrooms
-                </span>
-              </div>
-              <p className="mt-3 text-[11px] sm:text-xs text-muted-foreground">
-                {t("home.trustLogosNote")}
-              </p>
-            </div>
           </div>
         </section>
+
 
 
         {/* Why Jaga Trendy */}
