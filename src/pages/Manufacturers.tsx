@@ -126,9 +126,7 @@ const Manufacturers = () => {
                   <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
                     {t(`manufacturers.categories.${category.categoryKey}`)}
                   </h2>
-                  <span className="hidden sm:inline-flex text-xs text-muted-foreground uppercase tracking-[0.16em]">
-                    PREMIUM · PROJECTS · 50+
-                  </span>
+                  {/* PREMIUM · PROJECTS · 50+ wurde hier entfernt */}
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">

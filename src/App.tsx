@@ -12,6 +12,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Markenrecht from "./pages/Markenrecht";
+import Projects from "./pages/Projects";
 
 
 
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
             <Route path="/markenrecht" element={<Markenrecht />} />
+            <Route path="/projects" element={<Projects />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

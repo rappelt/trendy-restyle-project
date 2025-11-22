@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Building2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import footer from "@/components/footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroOffice from "@/assets/hero-office.jpg";
 import heroConsultation from "@/assets/hero-consultation.jpg";
@@ -22,7 +22,7 @@ const Index = () => {
             <div className="space-y-6">
               {/* B2B Badge */}
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-xs uppercase tracking-[0.16em] text-muted-foreground">
-                B2B · Architects & Planners · 50+
+                B2B · Architects & Planners
               </span>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
@@ -56,17 +56,13 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Visual Column – komplett klickbar */}
-            <Link
-              to="/manufacturers"
-              className="relative block group"
-              aria-label={t("home.discoverManufacturers")}
-            >
+            {/* Visual Column */}
+            <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-muted/40 shadow-xl shadow-black/5">
                 <img
                   src={heroOffice}
                   alt="Premium office furniture"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
 
@@ -78,7 +74,7 @@ const Index = () => {
                   {t("home.directToPartners")}
                 </p>
               </div>
-            </Link>
+            </div>
           </div>
         </section>
 
@@ -159,6 +155,103 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Projects / References Teaser */}
+        <section className="border-t border-border bg-muted/20">
+          <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] items-center">
+            {/* Text Column */}
+            <div className="space-y-4">
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                {t("home.projectsLabel") ?? "REFERENZEN · REALISIERTE PROJEKTE"}
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-semibold">
+                {t("home.projectsTitle") ??
+                  "Ausgewählte Referenzen für anspruchsvolle Raumkonzepte"}
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-xl">
+                {t("home.projectsSubtitle") ??
+                  "Von Hospitality über Büro bis Retail: JAGA Trendy begleitet Projekte von der ersten Idee bis zur Umsetzung – mit geprüften Premium-Herstellern und B2B-Erfahrung."}
+              </p>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <span className="inline-flex items-center rounded-full bg-secondary/20 px-3 py-1 text-xs text-secondary-foreground">
+                  Hospitality & Gastronomie
+                </span>
+                <span className="inline-flex items-center rounded-full bg-secondary/20 px-3 py-1 text-xs text-secondary-foreground">
+                  Büro & Workspace
+                </span>
+                <span className="inline-flex items-center rounded-full bg-secondary/20 px-3 py-1 text-xs text-secondary-foreground">
+                  Retail & Showrooms
+                </span>
+              </div>
+
+              <Button asChild size="lg" className="mt-4">
+                <Link to="/projects">
+                  {t("home.projectsCta") ?? "Referenzen ansehen"}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
+            {/* Small project cards */}
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border border-border bg-background p-5 shadow-sm flex flex-col justify-between min-h-[150px]">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-2">
+                    Hospitality
+                  </p>
+                  <h3 className="text-sm sm:text-base font-semibold mb-1">
+                    Hard Rock Cafe – Seating & Lounge
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    Premium-Sitzlösungen für hohe Besucherfrequenz – in enger
+                    Abstimmung mit Architektur und CI.
+                  </p>
+                </div>
+                <p className="mt-3 text-[11px] text-muted-foreground">
+                  Fokus: Langlebigkeit · Design · B2B-Service
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border bg-background p-5 shadow-sm flex flex-col justify-between min-h-[150px]">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-2">
+                    Office
+                  </p>
+                  <h3 className="text-sm sm:text-base font-semibold mb-1">
+                    Modernes Büro-Konzept
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    Arbeitswelten mit ergonomischen Lösungen, Akustik und
+                    repräsentativen Meeting-Zonen.
+                  </p>
+                </div>
+                <p className="mt-3 text-[11px] text-muted-foreground">
+                  Fokus: Ergonomie · Raumwirkung · Planungssicherheit
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border bg-background p-5 shadow-sm sm:col-span-2 flex flex-col justify-between min-h-[150px]">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-2">
+                    Retail / Konzeptflächen
+                  </p>
+                  <h3 className="text-sm sm:text-base font-semibold mb-1">
+                    Showroom- und Filialflächen
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    Einheitliche Markenpräsenz über mehrere Standorte – mit
+                    skalierbaren Möbelkonzepten und klaren Zuständigkeiten im
+                    Projekt.
+                  </p>
+                </div>
+                <p className="mt-3 text-[11px] text-muted-foreground">
+                  Fokus: Marke · Skalierung · Premium-Partner
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Jaga Trendy */}
         <section className="border-t border-border bg-muted/30">
           <div className="container mx-auto px-4 py-14 sm:py-16 lg:py-20">
@@ -212,7 +305,7 @@ const Index = () => {
         </section>
       </main>
 
-      <Footer />
+      <footer />
     </div>
   );
 };
