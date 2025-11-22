@@ -2,149 +2,212 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Building2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroOffice from "@/assets/hero-office.jpg";
 import heroConsultation from "@/assets/hero-consultation.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Header />
 
-      {/* Hero Section */}
-      <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4">
-        <div className="container mx-auto text-center max-w-4xl">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
-            {t('home.heroTitle')}
-          </h1>
-          <p className="text-base sm:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
-            {t('home.heroSubtitle')}
-          </p>
-          <p className="text-sm sm:text-base text-muted-foreground/80 mb-8 sm:mb-12 max-w-2xl mx-auto">
-            {t('home.heroSubline')}
-          </p>
-        </div>
-      </section>
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="border-b border-border bg-gradient-to-br from-background via-secondary/10 to-background">
+          <div className="container mx-auto px-4 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] items-center">
+            {/* Text Column */}
+            <div className="space-y-6">
+              {/* B2B Badge */}
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-xs uppercase tracking-[0.16em] text-muted-foreground">
+                B2B · Architects & Planners · 50+
+              </span>
 
-      {/* Split Decision Section */}
-      <section className="py-8 sm:py-12 px-4">
-        <div className="container mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-foreground">
-            {t('home.howCanWeHelp')}
-          </h3>
-          
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
+                {t("home.heroTitle")}
+              </h1>
+
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-xl">
+                {t("home.heroSubtitle")}
+              </p>
+
+              <p className="text-sm sm:text-base text-muted-foreground max-w-xl">
+                {t("home.heroSubline")}
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Button asChild size="lg">
+                  <Link to="/manufacturers">
+                    {t("home.discoverManufacturers")}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-border"
+                >
+                  <Link to="/contact">{t("home.requestProject")}</Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Visual Column */}
+            <div className="relative">
+              <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-muted/40 shadow-xl shadow-black/5">
+                <img
+                  src={heroOffice}
+                  alt="Premium office furniture"
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+
+              <div className="absolute -bottom-6 -left-6 hidden md:block rounded-2xl border border-border bg-background/90 px-4 py-3 shadow-lg shadow-black/10">
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  B2B · OBJECT FURNITURE
+                </p>
+                <p className="text-sm font-medium">
+                  {t("home.directToPartners")}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How can we help / Two main paths */}
+        <section className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 space-y-8">
+          <div className="max-w-3xl mx-auto text-center space-y-3">
+            <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              JAGA TRENDY
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-semibold">
+              {t("home.howCanWeHelp")}
+            </h2>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              {t("home.directToPartnersDesc")}
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:gap-8 md:grid-cols-2 max-w-6xl mx-auto">
             {/* Card 1: Direct to Manufacturers */}
-            <Link 
+            <Link
               to="/manufacturers"
-              className="group relative overflow-hidden rounded-2xl shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-large)] transition-all duration-500"
+              className="group relative overflow-hidden rounded-3xl border border-border bg-black/70 text-white shadow-[0_18px_60px_rgba(0,0,0,0.45)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80 z-10" />
-              <img 
-                src={heroOffice} 
-                alt="Salon mebli biurowych" 
-                className="w-full h-[400px] sm:h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
+              <img
+                src={heroOffice}
+                alt="Office showroom"
+                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 z-20 flex flex-col justify-end p-6 sm:p-8">
-                <Building2 className="w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" />
-                <h4 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                  {t('home.directToPartners')}
-                </h4>
-                <p className="text-base sm:text-lg mb-4 sm:mb-6 text-white/95 drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
-                  {t('home.directToPartnersDesc')}
-                </p>
-                <Button 
-                  size="lg" 
-                  className="self-start bg-accent hover:bg-accent/90 text-accent-foreground group-hover:translate-x-2 transition-transform text-sm sm:text-base"
-                >
-                  {t('home.toManufacturers')}
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-                </Button>
+              <div className="relative z-10 flex h-full flex-col justify-between p-6 sm:p-8 lg:p-10 bg-gradient-to-t from-black/80 via-black/65 to-black/30">
+                <div className="space-y-3">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs">
+                    <Building2 className="h-3.5 w-3.5" />
+                    <span>{t("home.directToPartners")}</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-semibold">
+                    {t("home.toManufacturers")}
+                  </h3>
+                  <p className="text-sm sm:text-base text-white/80 max-w-md">
+                    {t("home.directToPartnersDesc")}
+                  </p>
+                </div>
+                <div className="mt-6 flex items-center text-sm font-medium">
+                  <span className="mr-2">{t("home.discoverManufacturers")}</span>
+                  <ArrowRight className="h-4 w-4" />
+                </div>
               </div>
             </Link>
 
-            {/* Card 2: Need Consultation */}
-            <Link 
+            {/* Card 2: Need Consultation / Project request */}
+            <Link
               to="/contact"
-              className="group relative overflow-hidden rounded-2xl shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-large)] transition-all duration-500"
+              className="group relative overflow-hidden rounded-3xl border border-border bg-background shadow-[0_18px_60px_rgba(15,23,42,0.18)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80 z-10" />
-              <img 
-                src={heroConsultation} 
-                alt="Spotkanie konsultacyjne" 
-                className="w-full h-[400px] sm:h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
+              <img
+                src={heroConsultation}
+                alt="Project consultation"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 z-20 flex flex-col justify-end p-6 sm:p-8">
-                <MessageCircle className="w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" />
-                <h4 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                  {t('home.needConsultation')}
-                </h4>
-                <p className="text-base sm:text-lg mb-4 sm:mb-6 text-white/95 drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
-                  {t('home.needConsultationDesc')}
-                </p>
-                <Button 
-                  size="lg" 
-                  className="self-start bg-accent hover:bg-accent/90 text-accent-foreground group-hover:translate-x-2 transition-transform text-sm sm:text-base"
-                >
-                  {t('home.askForConsultation')}
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-                </Button>
+              <div className="relative z-10 flex h-full flex-col justify-between p-6 sm:p-8 lg:p-10 bg-gradient-to-t from-background via-background/85 to-background/40">
+                <div className="space-y-3">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-secondary/40 px-3 py-1 text-xs text-secondary-foreground">
+                    <MessageCircle className="h-3.5 w-3.5" />
+                    <span>{t("home.needConsultation")}</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-semibold">
+                    {t("home.needConsultation")}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground max-w-md">
+                    {t("home.needConsultationDesc")}
+                  </p>
+                </div>
+                <div className="mt-6 flex items-center text-sm font-medium">
+                  <span className="mr-2">{t("home.askForConsultation")}</span>
+                  <ArrowRight className="h-4 w-4" />
+                </div>
               </div>
             </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* USP Section */}
-      <section className="py-12 sm:py-20 px-4 bg-secondary/30">
-        <div className="container mx-auto max-w-6xl">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-foreground">
-            {t('home.whyJagaTrendy')}
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-8 h-8 text-accent" />
-              </div>
-              <h4 className="text-xl font-semibold mb-3 text-foreground">{t('home.premiumQuality')}</h4>
-              <p className="text-muted-foreground">
-                {t('home.premiumQualityDesc')}
+        {/* Why Jaga Trendy */}
+        <section className="border-t border-border bg-muted/30">
+          <div className="container mx-auto px-4 py-14 sm:py-16 lg:py-20">
+            <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                {t("home.whyJagaTrendy")}
               </p>
+              <h2 className="text-2xl sm:text-3xl font-semibold">
+                {t("home.whyJagaTrendy")}
+              </h2>
             </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="w-8 h-8 text-accent" />
+
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-3 max-w-5xl mx-auto">
+              <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary/30 text-secondary-foreground text-lg font-semibold">
+                  1
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold mb-2">
+                  {t("home.premiumQuality")}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("home.premiumQualityDesc")}
+                </p>
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-foreground">{t('home.personalAdvice')}</h4>
-              <p className="text-muted-foreground">
-                {t('home.personalAdviceDesc')}
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ArrowRight className="w-8 h-8 text-accent" />
+
+              <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary/30 text-secondary-foreground text-lg font-semibold">
+                  2
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold mb-2">
+                  {t("home.personalAdvice")}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("home.personalAdviceDesc")}
+                </p>
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-foreground">{t('home.b2bSpecialist')}</h4>
-              <p className="text-muted-foreground">
-                {t('home.b2bSpecialistDesc')}
-              </p>
+
+              <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary/30 text-secondary-foreground text-lg font-semibold">
+                  3
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold mb-2">
+                  {t("home.b2bSpecialist")}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("home.b2bSpecialistDesc")}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
-      {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-8 px-4">
-        <div className="container mx-auto text-center">
-          <p className="text-sm">
-            Jaga Trendy - Gdańsk, ul. Chrobrego 79F
-          </p>
-          <p className="text-sm mt-2 opacity-80">
-            gdansk@jagatrendy.pl
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
