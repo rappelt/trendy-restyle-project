@@ -6,7 +6,7 @@ export const en = {
   },
   home: {
     heroTitle: 'Premium furniture for professional space concepts.',
-    heroSubtitle: 'Curated for architects, planners, and commercial projects starting from 50 units.',
+    heroSubtitle: 'Curated for architects, planners, and commercial projects.',
     heroSubline: 'Selected manufacturers. High-quality materials. Reliable project execution.',
     discoverManufacturers: 'Discover manufacturers',
     requestProject: 'Request project',

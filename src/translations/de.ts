@@ -6,7 +6,7 @@ export const de = {
   },
   home: {
     heroTitle: 'Premium-Möbel für professionelle Raumkonzepte.',
-    heroSubtitle: 'Kuratiert für Architekten, Planer und gewerbliche Projekte ab 50 Einheiten.',
+    heroSubtitle: 'Kuratiert für Architekten, Planer und gewerbliche Projekte.',
     heroSubline: 'Ausgewählte Hersteller. Hochwertige Materialien. Zuverlässige Projektabwicklung.',
     discoverManufacturers: 'Hersteller entdecken',
     requestProject: 'Projektanfrage stellen',

@@ -6,7 +6,7 @@ export const pl = {
   },
   home: {
     heroTitle: 'Meble premium do profesjonalnych aranżacji przestrzeni.',
-    heroSubtitle: 'Dla architektów, projektantów oraz projektów komercyjnych od 50 sztuk.',
+    heroSubtitle: 'Dla architektów, projektantów oraz projektów komercyjnych.',
     heroSubline: 'Wybrani producenci. Wysokiej jakości materiały. Niezawodna realizacja projektów.',
     discoverManufacturers: 'Odkryj producentów',
     requestProject: 'Złóż zapytanie projektowe',
