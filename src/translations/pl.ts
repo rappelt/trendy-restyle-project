@@ -24,6 +24,7 @@ export const pl = {
     personalAdviceDesc: 'Indywidualne wsparcie od planowania po realizację',
     b2bSpecialist: 'Specjalista B2B',
     b2bSpecialistDesc: 'Doświadczony partner dla komercyjnych projektów wyposażenia wnętrz każdej wielkości',
+    projectsLabel: "Projekty referencyjne",
     referencesTitle: "Wybrane projekty referencyjne",
     referencesSubtitle: "Zrealizowane projekty dla hoteli, restauracji, biur i międzynarodowych marek.",
     viewProjects: "Zobacz wszystkie projekty",
@@ -43,6 +44,12 @@ export const pl = {
       cafeRestaurant: 'Kawiarnia / Restauracja',
       conferenceRooms: 'Sale Konferencyjne',
     },
+  },
+  projects: {
+    hospitality: "Hotele i hospitality",
+    office: "Biura i przestrzenie pracy",
+    retail: "Sklepy i retail",
+    public: "Przestrzenie publiczne",
   },
   contact: {
     title: 'Kontakt i konsultacje',

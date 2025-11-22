@@ -24,6 +24,7 @@ export const de = {
     personalAdviceDesc: 'Individuelle Unterstützung von der Planung bis zur Realisierung',
     b2bSpecialist: 'B2B-Spezialist',
     b2bSpecialistDesc: 'Erfahrener Partner für gewerbliche Einrichtungsprojekte jeder Größe',
+    projectsLabel: "Referenzen",
     referencesTitle: "Ausgewählte Referenzprojekte",
     referencesSubtitle: "Erfolgreich realisierte Projekte für Hotels, Restaurants, Büros und internationale Marken.",
     viewProjects: "Alle Projekte ansehen",
@@ -43,6 +44,12 @@ export const de = {
       cafeRestaurant: 'Café / Restaurant',
       conferenceRooms: 'Konferenzräume',
     },
+  },
+  projects: {
+    hospitality: "Hospitality & Hotels",
+    office: "Büro & Workspace",
+    retail: "Retail & Shop",
+    public: "Öffentliche Bereiche",
   },
   contact: {
     title: 'Kontakt und Beratung',
