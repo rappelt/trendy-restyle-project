@@ -161,32 +161,30 @@ const Index = () => {
             {/* Text Column */}
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                {t("home.projectsLabel") ?? "REFERENZEN · REALISIERTE PROJEKTE"}
+                {t("home.projectsLabel")}
               </p>
               <h2 className="text-2xl sm:text-3xl font-semibold">
-                {t("home.projectsTitle") ??
-                  "Ausgewählte Referenzen für anspruchsvolle Raumkonzepte"}
+                {t("home.referencesTitle")}
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-xl">
-                {t("home.projectsSubtitle") ??
-                  "Von Hospitality über Büro bis Retail: JAGA Trendy begleitet Projekte von der ersten Idee bis zur Umsetzung – mit geprüften Premium-Herstellern und B2B-Erfahrung."}
+                {t("home.referencesSubtitle")}
               </p>
 
               <div className="flex flex-wrap gap-2 pt-2">
                 <span className="inline-flex items-center rounded-full bg-secondary/20 px-3 py-1 text-xs text-secondary-foreground">
-                  Hospitality & Gastronomie
+                  {t("projects.hospitality")}
                 </span>
                 <span className="inline-flex items-center rounded-full bg-secondary/20 px-3 py-1 text-xs text-secondary-foreground">
-                  Büro & Workspace
+                  {t("projects.office")}
                 </span>
                 <span className="inline-flex items-center rounded-full bg-secondary/20 px-3 py-1 text-xs text-secondary-foreground">
-                  Retail & Showrooms
+                  {t("projects.retail")}
                 </span>
               </div>
 
               <Button asChild size="lg" className="mt-4">
                 <Link to="/projects">
-                  {t("home.projectsCta") ?? "Referenzen ansehen"}
+                  {t("home.viewProjects")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -197,7 +195,7 @@ const Index = () => {
               <div className="rounded-2xl border border-border bg-background p-5 shadow-sm flex flex-col justify-between min-h-[150px]">
                 <div>
                   <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-2">
-                    Hospitality
+                    {t("projects.hospitality")}
                   </p>
                   <h3 className="text-sm sm:text-base font-semibold mb-1">
                     Hard Rock Cafe – Seating & Lounge
@@ -215,7 +213,7 @@ const Index = () => {
               <div className="rounded-2xl border border-border bg-background p-5 shadow-sm flex flex-col justify-between min-h-[150px]">
                 <div>
                   <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-2">
-                    Office
+                    {t("projects.office")}
                   </p>
                   <h3 className="text-sm sm:text-base font-semibold mb-1">
                     Modernes Büro-Konzept
@@ -233,7 +231,7 @@ const Index = () => {
               <div className="rounded-2xl border border-border bg-background p-5 shadow-sm sm:col-span-2 flex flex-col justify-between min-h-[150px]">
                 <div>
                   <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-2">
-                    Retail / Konzeptflächen
+                    {t("projects.retail")}
                   </p>
                   <h3 className="text-sm sm:text-base font-semibold mb-1">
                     Showroom- und Filialflächen
