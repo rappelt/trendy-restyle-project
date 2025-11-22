@@ -46,10 +46,38 @@ export const en = {
     },
   },
   projects: {
+    // Category labels
     hospitality: "Hospitality & Hotels",
     office: "Office & Workspaces",
     retail: "Retail & Shop",
     public: "Public Spaces",
+    
+    // Page header
+    badge: "REALIZED PROJECTS",
+    title: "Reference Projects & Realized Objects",
+    subtitle: "Selected projects from hospitality, gastronomy and modern office concepts – realized with our premium partners in the contract furniture sector.",
+    badgeSegments: "Hospitality · Office · Retail",
+    
+    // Project details
+    ctaDetails: "Project inquiry with similar scope",
+    
+    // CTA section
+    ctaBadge: "LARGER SCOPE · 100% B2B",
+    ctaTitle: "Planning a larger contract or multi-site project?",
+    ctaSubtitle: "For projects of a certain size, we support you in manufacturer selection, sampling and contract furnishing – including direct contact with premium partners.",
+    ctaButton: "Request project",
+    ctaManufacturers: "Directly to selected premium manufacturers",
+    
+    // Project descriptions
+    hardrock: {
+      description: "Comprehensive contract furniture concept for high visitor frequency – from initial design to final seating, in close coordination with architects and operators.",
+    },
+    premiumOffice: {
+      description: "Modern office concept with ergonomic workstations and representative meeting areas – consistently with premium materials and timeless design.",
+    },
+    boutiqueHotel: {
+      description: "Stylish hotel furnishing for lobby and breakfast area – high-quality furniture that combines comfort and aesthetics for guests.",
+    },
   },
   contact: {
     title: 'Contact and consultations',
@@ -81,14 +109,12 @@ export const en = {
     phoneDesc: 'Contact us by email to schedule a meeting',
   },
   footer: {
-  imprint: "Imprint",
-  privacy: "Privacy Policy",
-  trademark: "Trademark Notice",
-  allRightsReserved: "All rights reserved.",
-  trademarkNotice:
-    "All mentioned brands and logos are registered trademarks of their respective owners.",
-},
-
+    imprint: "Imprint",
+    privacy: "Privacy Policy",
+    trademark: "Trademark Notice",
+    allRightsReserved: "All rights reserved.",
+    trademarkNotice: "All mentioned brands and logos are registered trademarks of their respective owners.",
+  },
   common: {
     backToHome: 'Back to home',
     required: '*',

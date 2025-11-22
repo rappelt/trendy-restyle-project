@@ -46,22 +46,50 @@ export const pl = {
     },
   },
   projects: {
+    // Category labels
     hospitality: "Hotele i hospitality",
     office: "Biura i przestrzenie pracy",
     retail: "Sklepy i retail",
     public: "Przestrzenie publiczne",
+    
+    // Page header
+    badge: "ZREALIZOWANE PROJEKTY",
+    title: "Projekty referencyjne i zrealizowane obiekty",
+    subtitle: "Wybrane projekty z branży hotelarskiej, gastronomicznej oraz nowoczesnych koncepcji biurowych – zrealizowane z naszymi partnerami premium w segmencie mebli kontraktowych.",
+    badgeSegments: "Hospitality · Biuro · Retail",
+    
+    // Project details
+    ctaDetails: "Zapytanie projektowe o podobnym zakresie",
+    
+    // CTA section
+    ctaBadge: "WIĘKSZE PROJEKTY · 100% B2B",
+    ctaTitle: "Planujesz większy projekt obiektowy lub sieć lokali?",
+    ctaSubtitle: "Przy projektach określonej wielkości wspieramy Cię w wyborze producenta, próbkowaniu i wyposażeniu obiektów – w tym bezpośredni kontakt z partnerami premium.",
+    ctaButton: "Zapytaj o projekt",
+    ctaManufacturers: "Bezpośrednio do wybranych producentów premium",
+    
+    // Project descriptions
+    hardrock: {
+      description: "Kompleksowa koncepcja mebli kontraktowych dla dużego ruchu gości – od wstępnego projektu po finalne umeblowanie, w ścisłej współpracy z architektami i operatorami.",
+    },
+    premiumOffice: {
+      description: "Nowoczesna koncepcja biurowa z ergonomicznymi stanowiskami pracy i reprezentacyjnymi strefami spotkań – konsekwentnie z materiałami premium i ponadczasowym designem.",
+    },
+    boutiqueHotel: {
+      description: "Stylowe wyposażenie hotelu dla lobby i strefy śniadaniowej – wysokiej jakości meble łączące komfort i estetykę dla gości.",
+    },
   },
   contact: {
     title: 'Kontakt i konsultacje',
-    subtitle: 'Wspieramy klientów komercyjnych w planowaniu i realizacji projektów wyposażenia wnętrz. Skontaktuj się z nami, aby uzyskać osobistą konsultację.',
+    subtitle: 'Wspieramy klientów komercyjnych w planowaniu i realizacji projektów wnętrz. Skontaktuj się z nami w celu osobistej konsultacji.',
     formTitle: 'Zapytanie o konsultację',
-    formDesc: 'Wypełnij formularz, a my skontaktujemy się z Tobą w najbliższym czasie.',
+    formDesc: 'Wypełnij formularz, a skontaktujemy się z Tobą tak szybko, jak to możliwe.',
     commercialOnly: 'Tylko dla klientów komercyjnych.',
     firstName: 'Imię',
     lastName: 'Nazwisko',
     company: 'Firma',
     companyPlaceholder: 'Nazwa Twojej firmy',
-    email: 'E-mail',
+    email: 'Email',
     phone: 'Telefon',
     projectType: 'Rodzaj projektu',
     projectTypePlaceholder: 'np. wyposażenie biura, sala konferencyjna, restauracja',
@@ -78,17 +106,15 @@ export const pl = {
     planning: 'Indywidualne planowanie projektu',
     comprehensive: 'Kompleksowe rozwiązania z jednego źródła',
     longterm: 'Długoterminowa współpraca',
-    phoneDesc: 'Skontaktuj się z nami przez e-mail aby umówić spotkanie',
+    phoneDesc: 'Skontaktuj się z nami e-mailem, aby umówić spotkanie',
   },
   footer: {
-  imprint: "Impressum / Dane firmy",
-  privacy: "Polityka prywatności",
-  trademark: "Informacja o znakach towarowych",
-  allRightsReserved: "Wszelkie prawa zastrzeżone.",
-  trademarkNotice:
-    "Wszystkie wymienione marki i logotypy są zarejestrowanymi znakami towarowymi ich właścicieli.",
-},
-
+    imprint: "Stopka",
+    privacy: "Polityka prywatności",
+    trademark: "Informacja o znakach towarowych",
+    allRightsReserved: "Wszelkie prawa zastrzeżone.",
+    trademarkNotice: "Wszystkie wymienione marki i loga są zastrzeżonymi znakami towarowymi ich właścicieli.",
+  },
   common: {
     backToHome: 'Powrót do strony głównej',
     required: '*',

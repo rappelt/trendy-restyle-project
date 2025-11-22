@@ -46,10 +46,38 @@ export const de = {
     },
   },
   projects: {
+    // Category labels
     hospitality: "Hospitality & Hotels",
     office: "Büro & Workspace",
     retail: "Retail & Shop",
     public: "Öffentliche Bereiche",
+    
+    // Page header
+    badge: "REALISIERTE PROJEKTE",
+    title: "Referenzprojekte & realisierte Objekte",
+    subtitle: "Ausgewählte Projekte aus Hotellerie, Gastronomie und modernen Office-Konzepten – realisiert mit unseren Premium-Partnern im Objektmöbelbereich.",
+    badgeSegments: "Hospitality · Büro · Retail",
+    
+    // Project details
+    ctaDetails: "Projektanfrage mit ähnlichem Umfang",
+    
+    // CTA section
+    ctaBadge: "GRÖSSERE PROJEKTE · 100% B2B",
+    ctaTitle: "Sie planen ein größeres Objekt- oder Filialprojekt?",
+    ctaSubtitle: "Ab einer gewissen Projektgröße unterstützen wir Sie bei Herstellerwahl, Bemusterung und Objektbestuhlung – inkl. direktem Kontakt zu den Premium-Partnern.",
+    ctaButton: "Projekt anfragen",
+    ctaManufacturers: "Direkt zu ausgewählten Premium-Herstellern",
+    
+    // Project descriptions
+    hardrock: {
+      description: "Umfassendes Objektmöbel-Konzept für hohe Besucherfrequenz – vom Erstentwurf bis zur finalen Bestuhlung, in enger Abstimmung mit Architekten und Betreiber.",
+    },
+    premiumOffice: {
+      description: "Modernes Office-Konzept mit ergonomischen Arbeitsplätzen und repräsentativen Meeting-Bereichen – durchgängig mit Premium-Materialien und zeitlosem Design.",
+    },
+    boutiqueHotel: {
+      description: "Stilvolle Hotelausstattung für Lobby und Frühstücksbereich – hochwertige Möbel, die Komfort und Ästhetik für Gäste vereinen.",
+    },
   },
   contact: {
     title: 'Kontakt und Beratung',
@@ -81,14 +109,12 @@ export const de = {
     phoneDesc: 'Kontaktieren Sie uns per E-Mail, um einen Termin zu vereinbaren',
   },
   footer: {
-  imprint: "Impressum",
-  privacy: "Datenschutzerklärung",
-  trademark: "Markenrechtlicher Hinweis",
-  allRightsReserved: "Alle Rechte vorbehalten.",
-  trademarkNotice:
-    "Alle genannten Marken und Logos sind eingetragene Warenzeichen ihrer jeweiligen Eigentümer.",
-},
-
+    imprint: "Impressum",
+    privacy: "Datenschutzerklärung",
+    trademark: "Markenrechtlicher Hinweis",
+    allRightsReserved: "Alle Rechte vorbehalten.",
+    trademarkNotice: "Alle genannten Marken und Logos sind eingetragene Warenzeichen ihrer jeweiligen Eigentümer.",
+  },
   common: {
     backToHome: 'Zurück zur Startseite',
     required: '*',
