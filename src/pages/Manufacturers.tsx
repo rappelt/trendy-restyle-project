@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import { useLanguage } from "@/contexts/LanguageContext";
+
 import lasLogo from "@/assets/logos/las.png";
 import wilkhahnLogo from "@/assets/logos/wilkhahn.svg";
 import profimLogo from "@/assets/logos/profim.png";
@@ -20,9 +21,9 @@ import thonetLogo from "@/assets/logos/thonet.png";
 
 const manufacturers = [
   {
-    categoryKey: "officeFurniture",
+    categoryKey: "officeSystems",
     brands: [
-      { name: "LAS", url: "http://las.it/", logo: lasLogo }
+      { name: "LAS", url: "https://www.las.it/", logo: lasLogo }
     ]
   },
   {
@@ -58,13 +59,8 @@ const manufacturers = [
       { name: "Infinity", url: "https://infinityoffice.com.au/", logo: infinityLogo },
       { name: "Pedrali", url: "https://www.pedrali.it/it/", logo: pedraliLogo },
       { name: "Magis", url: "http://www.magisdesign.com/", logo: magisLogo },
-      { name: "Plust", url: "https://www.plust.it/en/products/", logo: plustLogo }
-    ]
-  },
-  {
-    categoryKey: "conferenceRooms",
-    brands: [
-      { name: "Thonet", url: "https://www.thonet.com/", logo: thonetLogo }
+      { name: "Plust", url: "https://www.plust.com/", logo: plustLogo },
+      { name: "Thonet", url: "https://www.thonet.de/", logo: thonetLogo }
     ]
   }
 ];
@@ -73,102 +69,128 @@ const Manufacturers = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Header />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-12 px-4 bg-gradient-to-br from-secondary/30 to-background">
-        <div className="container mx-auto max-w-6xl">
-          <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            {t('common.backToHome')}
-          </Link>
-          <h1 className="text-5xl font-bold mb-6 text-foreground">
-            {t('manufacturers.title')}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl">
-            {t('manufacturers.subtitle')}
-          </p>
-        </div>
-      </section>
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="border-b border-border bg-gradient-to-br from-background via-secondary/10 to-background pt-28 pb-12 sm:pt-32 sm:pb-16">
+          <div className="container mx-auto px-4 max-w-6xl space-y-6">
+            <Link
+              to="/"
+              className="inline-flex items-center text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              {t("common.backToHome")}
+            </Link>
 
-      {/* Manufacturers Grid */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto max-w-6xl space-y-16">
-          {manufacturers.map((category, idx) => (
-            <div key={idx} className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground border-b border-border pb-3">
-                {t(`manufacturers.categories.${category.categoryKey}`)}
+            <div className="space-y-4">
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-xs uppercase tracking-[0.16em] text-muted-foreground">
+                B2B · Premium Manufacturers
+              </span>
+
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
+                {t("manufacturers.title")}
+              </h1>
+
+              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl">
+                {t("manufacturers.subtitle")}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Manufacturers Grid */}
+        <section className="py-12 sm:py-16 lg:py-20">
+          <div className="container mx-auto px-4 max-w-6xl space-y-14 sm:space-y-16">
+            {manufacturers.map((category, idx) => (
+              <div key={idx} className="space-y-6">
+                <div className="flex items-center justify-between gap-4">
+                  <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
+                    {t(`manufacturers.categories.${category.categoryKey}`)}
+                  </h2>
+                  {/* optional kleiner Hint */}
+                  <span className="hidden sm:inline-flex text-xs text-muted-foreground uppercase tracking-[0.16em]">
+                    PREMIUM · PROJECTS · 50+
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+                  {category.brands.map((brand, brandIdx) => (
+                    <Card
+                      key={brandIdx}
+                      className="group relative overflow-hidden rounded-3xl border border-border bg-background/80 shadow-sm hover:shadow-[0_18px_60px_rgba(15,23,42,0.18)] transition-all duration-300"
+                    >
+                      <CardContent className="p-6 sm:p-7 flex flex-col h-full">
+                        <div className="mb-6 flex-1 flex flex-col items-center text-center">
+                          <div className="mb-4 w-full h-24 sm:h-28 flex items-center justify-center p-3 sm:p-4">
+                            <img
+                              src={brand.logo}
+                              alt={brand.name}
+                              className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            />
+                          </div>
+                          <h3 className="text-base sm:text-lg font-semibold">
+                            {brand.name}
+                          </h3>
+                        </div>
+
+                        <div className="flex items-center justify-between pt-2 border-t border-border/60 mt-2">
+                          <p className="text-xs text-muted-foreground">
+                            {t("manufacturers.projectHintShort") ??
+                              t("manufacturers.projectHint")}
+                          </p>
+                          <a
+                            href={brand.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="ml-3 inline-flex items-center text-xs font-medium text-primary hover:underline"
+                          >
+                            {t("manufacturers.visitWebsite")}
+                            <ExternalLink className="w-3.5 h-3.5 ml-1" />
+                          </a>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="border-t border-border bg-muted/30">
+          <div className="container mx-auto px-4 py-14 sm:py-16 lg:py-20">
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                JAGA TRENDY · PROJECT SUPPORT
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-semibold">
+                {t("manufacturers.needHelp")}
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.brands.map((brand, brandIdx) => (
-                  <Card 
-                    key={brandIdx} 
-                    className="group hover:shadow-[var(--shadow-medium)] transition-all duration-300 overflow-hidden"
+              <p className="text-sm sm:text-base text-muted-foreground">
+                {t("manufacturers.needHelpDesc")}
+              </p>
+
+              <div className="pt-4">
+                <Link to="/contact">
+                  <Button
+                    size="lg"
+                    className="px-6 sm:px-8"
                   >
-                    <CardContent className="p-6 sm:p-8 flex flex-col items-center justify-center min-h-[260px] sm:min-h-[240px]">
-                      <div className="mb-6 w-full h-40 sm:h-36 flex items-center justify-center p-4">
-                        <img 
-                          src={brand.logo} 
-                          alt={brand.name}
-                          className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-110"
-                        />
-                      </div>
-                      <a
-                        href={brand.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center"
-                      >
-                        <Button 
-                          variant="outline" 
-                          size="sm"
-                          className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                        >
-                          {t('manufacturers.visitWebsite')}
-                          <ExternalLink className="ml-2 h-4 w-4" />
-                        </Button>
-                      </a>
-                    </CardContent>
-                  </Card>
-                ))}
+                    {t("home.askForConsultation")}
+                  </Button>
+                </Link>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      </main>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-primary text-primary-foreground">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            {t('manufacturers.needHelp')}
-          </h2>
-          <p className="text-lg mb-8 opacity-90">
-            {t('manufacturers.needHelpDesc')}
-          </p>
-          <Link to="/contact">
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground"
-            >
-              {t('home.askForConsultation')}
-            </Button>
-          </Link>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-8 px-4">
-        <div className="container mx-auto text-center">
-          <p className="text-sm">
-            Jaga Trendy - Gdańsk, ul. Chrobrego 79F
-          </p>
-          <p className="text-sm mt-2 opacity-80">
-            gdansk@jagatrendy.pl
-          </p>
-        </div>
-      </footer>
+      {/* Footer-Komponente – falls du sie hier auch nutzen möchtest
+          sonst kannst du deinen bisherigen Footer-Code stehen lassen */}
+      {/* <Footer /> */}
     </div>
   );
 };
