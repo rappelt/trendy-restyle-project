@@ -56,13 +56,17 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Visual Column */}
-            <div className="relative">
+            {/* Visual Column – komplett klickbar */}
+            <Link
+              to="/manufacturers"
+              className="relative block group"
+              aria-label={t("home.discoverManufacturers")}
+            >
               <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-muted/40 shadow-xl shadow-black/5">
                 <img
                   src={heroOffice}
                   alt="Premium office furniture"
-                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
                 />
               </div>
 
@@ -74,7 +78,7 @@ const Index = () => {
                   {t("home.directToPartners")}
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
@@ -140,7 +144,8 @@ const Index = () => {
                     <span>{t("home.needConsultation")}</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold">
-                    {t("home.needConsultation")}</h3>
+                    {t("home.needConsultation")}
+                  </h3>
                   <p className="text-sm sm:text-base text-muted-foreground max-w-md">
                     {t("home.needConsultationDesc")}
                   </p>
