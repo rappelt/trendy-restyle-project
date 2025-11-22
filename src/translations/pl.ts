@@ -24,6 +24,9 @@ export const pl = {
     personalAdviceDesc: 'Indywidualne wsparcie od planowania po realizację',
     b2bSpecialist: 'Specjalista B2B',
     b2bSpecialistDesc: 'Doświadczony partner dla komercyjnych projektów wyposażenia wnętrz każdej wielkości',
+    referencesTitle: "Wybrane projekty referencyjne",
+    referencesSubtitle: "Zrealizowane projekty dla hoteli, restauracji, biur i międzynarodowych marek.",
+    viewProjects: "Zobacz wszystkie projekty",
   },
   manufacturers: {
     title: 'Nasi producenci',
