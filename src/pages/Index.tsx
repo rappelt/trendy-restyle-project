@@ -15,12 +15,29 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
             {t('home.heroTitle')}
-          </h2>
-          <p className="text-base sm:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto">
+          </h1>
+          <p className="text-base sm:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
             {t('home.heroSubtitle')}
           </p>
+          <p className="text-sm sm:text-base text-muted-foreground/80 mb-8 sm:mb-12 max-w-2xl mx-auto">
+            {t('home.heroSubline')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button asChild size="lg" className="w-full sm:w-auto">
+              <Link to="/manufacturers">
+                {t('home.discoverManufacturers')}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+              <Link to="/contact">
+                {t('home.requestProject')}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

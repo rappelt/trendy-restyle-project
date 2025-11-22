@@ -5,8 +5,11 @@ export const de = {
     contact: 'Kontakt',
   },
   home: {
-    heroTitle: 'Premium Büro- und Objektmöbel',
-    heroSubtitle: 'Hochwertige Möbellösungen für Büros, Konferenzräume, Gastronomie, Hotels und andere Objekte. Ihr Partner für professionelle Einrichtungsprojekte.',
+    heroTitle: 'Premium-Möbel für professionelle Raumkonzepte.',
+    heroSubtitle: 'Kuratiert für Architekten, Planer und gewerbliche Projekte ab 50 Einheiten.',
+    heroSubline: 'Ausgewählte Hersteller. Hochwertige Materialien. Zuverlässige Projektabwicklung.',
+    discoverManufacturers: 'Hersteller entdecken',
+    requestProject: 'Projektanfrage stellen',
     howCanWeHelp: 'Wie können wir Ihnen helfen?',
     directToPartners: 'Direkt zu unseren Premium-Partnern',
     directToPartnersDesc: 'Durchsuchen Sie unsere Premium-Hersteller und finden Sie die perfekten Möbel für Ihr Projekt.',
