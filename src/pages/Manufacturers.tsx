@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -22,47 +21,65 @@ import thonetLogo from "@/assets/logos/thonet.png";
 const manufacturers = [
   {
     categoryKey: "officeSystems",
-    brands: [
-      { name: "LAS", url: "https://www.las.it/", logo: lasLogo }
-    ]
+    brands: [{ name: "LAS", url: "https://www.las.it/", logo: lasLogo }],
   },
   {
     categoryKey: "officeChairsPremium",
     brands: [
-      { name: "Wilkhahn", url: "https://www.wilkhahn.com/en/", logo: wilkhahnLogo }
-    ]
+      {
+        name: "Wilkhahn",
+        url: "https://www.wilkhahn.com/en/",
+        logo: wilkhahnLogo,
+      },
+    ],
   },
   {
     categoryKey: "officeChairs",
     brands: [
       { name: "Profim", url: "https://www.profim.pl/", logo: profimLogo },
-      { name: "Bejot", url: "http://www.bejot.eu/", logo: bejotLogo }
-    ]
+      { name: "Bejot", url: "http://www.bejot.eu/", logo: bejotLogo },
+    ],
   },
   {
     categoryKey: "sofas",
     brands: [
       { name: "Alias", url: "http://alias.design/", logo: aliasLogo },
-      { name: "Softline", url: "http://www.softline.dk/", logo: softlineLogo }
-    ]
+      { name: "Softline", url: "http://www.softline.dk/", logo: softlineLogo },
+    ],
   },
   {
     categoryKey: "woodenChairs",
     brands: [
-      { name: "Paged", url: "https://www.pagedmeble.pl/pl/", logo: pagedLogo },
-      { name: "TON", url: "https://www.ton.eu/pl/krzesla/", logo: tonLogo }
-    ]
+      {
+        name: "Paged",
+        url: "https://www.pagedmeble.pl/pl/",
+        logo: pagedLogo,
+      },
+      { name: "TON", url: "https://www.ton.eu/pl/krzesla/", logo: tonLogo },
+    ],
   },
   {
     categoryKey: "cafeRestaurant",
     brands: [
-      { name: "Infinity", url: "https://infinityoffice.com.au/", logo: infinityLogo },
-      { name: "Pedrali", url: "https://www.pedrali.it/it/", logo: pedraliLogo },
+      {
+        name: "Infinity",
+        url: "https://infinityoffice.com.au/",
+        logo: infinityLogo,
+      },
+      {
+        name: "Pedrali",
+        url: "https://www.pedrali.it/it/",
+        logo: pedraliLogo,
+      },
       { name: "Magis", url: "http://www.magisdesign.com/", logo: magisLogo },
       { name: "Plust", url: "https://www.plust.com/", logo: plustLogo },
-      { name: "Thonet", url: "https://www.thonet.de/", logo: thonetLogo }
-    ]
-  }
+      {
+        name: "Thonet",
+        url: "https://www.thonet.de/",
+        logo: thonetLogo,
+      },
+    ],
+  },
 ];
 
 const Manufacturers = () => {
@@ -109,7 +126,6 @@ const Manufacturers = () => {
                   <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
                     {t(`manufacturers.categories.${category.categoryKey}`)}
                   </h2>
-                  {/* optional kleiner Hint */}
                   <span className="hidden sm:inline-flex text-xs text-muted-foreground uppercase tracking-[0.16em]">
                     PREMIUM · PROJECTS · 50+
                   </span>
@@ -117,11 +133,15 @@ const Manufacturers = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
                   {category.brands.map((brand, brandIdx) => (
-                    <Card
+                    <a
                       key={brandIdx}
-                      className="group relative overflow-hidden rounded-3xl border border-border bg-background/80 shadow-sm hover:shadow-[0_18px_60px_rgba(15,23,42,0.18)] transition-all duration-300"
+                      href={brand.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group relative overflow-hidden rounded-3xl border border-border bg-background/80 shadow-sm hover:shadow-[0_18px_60px_rgba(15,23,42,0.18)] transition-all duration-300 block"
                     >
-                      <CardContent className="p-6 sm:p-7 flex flex-col h-full">
+                      <div className="p-6 sm:p-7 flex flex-col h-full">
+                        {/* Logo + Name */}
                         <div className="mb-6 flex-1 flex flex-col items-center text-center">
                           <div className="mb-4 w-full h-24 sm:h-28 flex items-center justify-center p-3 sm:p-4">
                             <img
@@ -135,23 +155,19 @@ const Manufacturers = () => {
                           </h3>
                         </div>
 
+                        {/* Infos unten */}
                         <div className="flex items-center justify-between pt-2 border-t border-border/60 mt-2">
                           <p className="text-xs text-muted-foreground">
                             {t("manufacturers.projectHintShort") ??
                               t("manufacturers.projectHint")}
                           </p>
-                          <a
-                            href={brand.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="ml-3 inline-flex items-center text-xs font-medium text-primary hover:underline"
-                          >
+                          <span className="ml-3 inline-flex items-center text-xs font-medium text-primary">
                             {t("manufacturers.visitWebsite")}
                             <ExternalLink className="w-3.5 h-3.5 ml-1" />
-                          </a>
+                          </span>
                         </div>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -175,10 +191,7 @@ const Manufacturers = () => {
 
               <div className="pt-4">
                 <Link to="/contact">
-                  <Button
-                    size="lg"
-                    className="px-6 sm:px-8"
-                  >
+                  <Button size="lg" className="px-6 sm:px-8">
                     {t("home.askForConsultation")}
                   </Button>
                 </Link>
@@ -188,9 +201,8 @@ const Manufacturers = () => {
         </section>
       </main>
 
-      {/* Footer-Komponente – falls du sie hier auch nutzen möchtest
-          sonst kannst du deinen bisherigen Footer-Code stehen lassen */}
-      {/* <Footer /> */}
+      {/* Wenn du deinen footer verwenden willst: */}
+      {/* <footer /> */}
     </div>
   );
 };
