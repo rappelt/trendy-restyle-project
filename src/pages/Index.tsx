@@ -250,6 +250,78 @@ const Index = () => {
           </div>
         </section>
 
+          {/* Proof of Trust / Vertrauen & Erfahrung */}
+        <section className="border-t border-border bg-background">
+          <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20">
+            <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                {t("home.trustLabel")}
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-semibold">
+                {t("home.trustTitle")}
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                {t("home.trustSubtitle")}
+              </p>
+            </div>
+
+            {/* Stats */}
+            <div className="grid gap-4 sm:gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+              <div className="rounded-2xl border border-border bg-muted/30 p-5 sm:p-6">
+                <p className="text-2xl sm:text-3xl font-semibold">
+                  {t("home.trustStatProjectsValue")}
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {t("home.trustStatProjects")}
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border bg-muted/30 p-5 sm:p-6">
+                <p className="text-2xl sm:text-3xl font-semibold">
+                  {t("home.trustStatSectorsValue")}
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {t("home.trustStatSectors")}
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border bg-muted/30 p-5 sm:p-6">
+                <p className="text-2xl sm:text-3xl font-semibold">
+                  {t("home.trustStatManufacturersValue")}
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {t("home.trustStatManufacturers")}
+                </p>
+              </div>
+            </div>
+
+            {/* Trusted by / Logos / Marken */}
+            <div className="mt-10 max-w-5xl mx-auto">
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                {t("home.trustTrustedBy")}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2 sm:gap-3">
+                <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs sm:text-sm text-muted-foreground">
+                  Hospitality · Hotelprojekte
+                </span>
+                <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs sm:text-sm text-muted-foreground">
+                  Gastronomie &amp; Café-Konzepte
+                </span>
+                <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs sm:text-sm text-muted-foreground">
+                  Office &amp; Meetingräume
+                </span>
+                <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs sm:text-sm text-muted-foreground">
+                  Retail &amp; Showrooms
+                </span>
+              </div>
+              <p className="mt-3 text-[11px] sm:text-xs text-muted-foreground">
+                {t("home.trustLogosNote")}
+              </p>
+            </div>
+          </div>
+        </section>
+
+
         {/* Why Jaga Trendy */}
         <section className="border-t border-border bg-muted/30">
           <div className="container mx-auto px-4 py-14 sm:py-16 lg:py-20">

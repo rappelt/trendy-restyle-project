@@ -28,6 +28,22 @@ export const pl = {
     referencesTitle: "Wybrane projekty referencyjne",
     referencesSubtitle: "Zrealizowane projekty dla hoteli, restauracji, biur i międzynarodowych marek.",
     viewProjects: "Zobacz wszystkie projekty",
+     projectsLabel: "Realizacje & projekty",
+    projectsTitle: "Zrealizowane projekty i referencje",
+    projectsSubtitle: "Wybrane projekty w obszarze hospitality, biur i retail, realizowane we współpracy z naszymi producentami premium.",
+    projectsCta: "Zobacz realizacje",
+    trustLabel: "Zaufanie i doświadczenie",
+    trustTitle: "Dlaczego możesz powierzyć nam swoje projekty",
+    trustSubtitle: "Meble kontraktowe dla hoteli, biur i retail – z bezpośrednim dostępem do sprawdzonych producentów premium.",
+    trustStatProjectsValue: "50+",
+    trustStatProjects: "Zrealizowane projekty B2B",
+    trustStatSectorsValue: "3",
+    trustStatSectors: "Główne obszary: hospitality, biura, retail",
+    trustStatManufacturersValue: "5+",
+    trustStatManufacturers: "Bezpośrednie relacje z producentami premium",
+    trustTrustedBy: "Zaufanie klientów B2B",
+    trustLogosNote: "Przykłady reprezentują typy zrealizowanych projektów i marek, z którymi współpracujemy przy projektach kontraktowych."
+
   },
   manufacturers: {
     title: 'Nasi producenci',

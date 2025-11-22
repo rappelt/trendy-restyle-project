@@ -28,6 +28,22 @@ export const en = {
     referencesTitle: "Selected Reference Projects",
     referencesSubtitle:"Successfully completed projects for hotels, restaurants, offices and international brands.",
     viewProjects: "View all projects",
+     projectsLabel: "References & Projects",
+    projectsTitle: "Completed projects & references",
+    projectsSubtitle:"Selected hospitality, office and retail projects we support together with our premium manufacturers.",
+    projectsCta: "View references",    
+    trustLabel: "Trust & Experience",
+    trustTitle: "Why you can trust us with your projects",
+    trustSubtitle: "Contract furniture for hospitality, office and retail – with direct access to vetted premium manufacturers.",
+    trustStatProjectsValue: "50+",
+    trustStatProjects: "Completed B2B projects",
+    trustStatSectorsValue: "3",
+    trustStatSectors: "Core sectors: hospitality, office, retail",
+    trustStatManufacturersValue: "5+",
+    trustStatManufacturers: "Direct relations to premium manufacturers",
+    trustTrustedBy: "Trusted by B2B clients",
+    trustLogosNote: "The examples represent types of realised projects and brands we work with in contract furniture projects."
+
   },
   manufacturers: {
     title: 'Our manufacturers',

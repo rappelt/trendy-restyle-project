@@ -28,6 +28,22 @@ export const de = {
     referencesTitle: "Ausgewählte Referenzprojekte",
     referencesSubtitle: "Erfolgreich realisierte Projekte für Hotels, Restaurants, Büros und internationale Marken.",
     viewProjects: "Alle Projekte ansehen",
+    projectsLabel: "Referenzen & Projekte",
+    projectsTitle: "Abgeschlossene Projekte & Referenzen",
+    projectsSubtitle: "Ausgewählte Hospitality-, Office- und Retail-Projekte, die wir mit unseren Premium-Herstellern begleiten durften.",
+    projectsCta: "Zu den Referenzen",
+    trustLabel: "Vertrauen & Erfahrung",
+    trustTitle: "Warum Sie uns Ihre Projekte anvertrauen können",
+    trustSubtitle:"Objektmöbel für Hospitality, Office und Retail – mit direktem Zugang zu geprüften Premium-Herstellern.",
+    trustStatProjectsValue: "50+",
+    trustStatProjects: "Abgeschlossene B2B-Projekte",
+    trustStatSectorsValue: "3",
+    trustStatSectors: "Schwerpunktbereiche: Hospitality, Office, Retail",
+    trustStatManufacturersValue: "5+",
+    trustStatManufacturers: "Direkte Kontakte zu Premium-Herstellern",
+    trustTrustedBy: "Vertrauen von B2B-Kunden",
+    trustLogosNote: "Die Beispiele stehen stellvertretend für realisierte Projekte und Marken, mit denen wir im Rahmen von Objektmöbel-Projekten arbeiten."
+
   },
   manufacturers: {
     title: 'Unsere Hersteller',
