@@ -56,24 +56,28 @@ const Contact = () => {
           
           {/* Architects Hook */}
           <div className="mb-12 rounded-3xl border border-border bg-gradient-to-br from-primary/5 via-background to-secondary/5 p-6 sm:p-8 lg:p-10 shadow-lg">
-            <div className="flex items-start gap-4 mb-4">
-              <div className="flex-shrink-0 mt-1">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Compass className="h-6 w-6 text-primary" />
+            <div className="text-center space-y-4">
+              {/* Badge with Icon inline */}
+              <div className="inline-flex items-center gap-2 mb-2">
+                <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Compass className="h-4 w-4 text-primary" />
                 </div>
-              </div>
-              <div className="flex-1">
-                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-2">
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
                   {t('contact.architectsHookBadge')}
                 </p>
-                <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-foreground">
-                  {t('contact.architectsHookTitle')}
-                </h2>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  {t('contact.architectsHookText')}
-                </p>
               </div>
+              
+              {/* Title - centered */}
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground max-w-2xl mx-auto">
+                {t('contact.architectsHookTitle')}
+              </h2>
+              
+              {/* Main text - full width with better readability */}
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-4xl mx-auto text-left sm:text-center">
+                {t('contact.architectsHookText')}
+              </p>
             </div>
+            
             <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between flex-wrap gap-4">
               <p className="text-sm text-muted-foreground italic">
                 {t('contact.architectsHookCta')}
