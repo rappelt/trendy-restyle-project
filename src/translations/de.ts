@@ -43,6 +43,12 @@ export const de = {
     trustStatManufacturers: "Direkte Kontakte zu Premium-Herstellern",
     trustTrustedBy: "Vertrauen von B2B-Kunden",
     trustLogosNote: "Die Beispiele stehen stellvertretend für realisierte Projekte und Marken, mit denen wir im Rahmen von Objektmöbel-Projekten arbeiten."
+    trustHeading: "VERTRAUEN",
+  trustTitle: "Zahlen, die Vertrauen schaffen",
+  trustSubtitle: "Ausgewählte Referenzprojekte aus Büro, Hospitality und weiteren B2B-Bereichen.",
+  trustStatProjects: "Abgeschlossene B2B-Projekte",
+  trustStatSectors: "Branchen (Office, Hospitality, Healthcare u. a.)",
+  trustStatManufacturers: "Premium-Hersteller im Netzwerk",
 
   },
   manufacturers: {

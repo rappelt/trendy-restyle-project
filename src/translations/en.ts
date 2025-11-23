@@ -43,8 +43,14 @@ export const en = {
     trustStatManufacturers: "Direct relations to premium manufacturers",
     trustTrustedBy: "Trusted by B2B clients",
     trustLogosNote: "The examples represent types of realised projects and brands we work with in contract furniture projects."
-
+    trustHeading: "TRUST",
+    trustTitle: "Numbers that build confidence",
+    trustSubtitle: "Selected reference projects in office, hospitality and other B2B sectors.",
+    trustStatProjects: "Completed B2B projects",
+    trustStatSectors: "Sectors (office, hospitality, healthcare, etc.)",
+    trustStatManufacturers: "Premium manufacturers in our network",
   },
+  
   manufacturers: {
     title: 'Our manufacturers',
     subtitle: 'We work exclusively with renowned manufacturers who guarantee the highest quality, innovative design and durability.',

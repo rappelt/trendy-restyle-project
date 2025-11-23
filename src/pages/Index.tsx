@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Building2, MessageCircle, Layers, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  MessageCircle,
+  Layers,
+  Sparkles,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import footer from "@/components/footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroOffice from "@/assets/hero-office.jpg";
 import heroConsultation from "@/assets/hero-consultation.jpg";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, ReactNode } from "react";
+
 
 const CountUp: React.FC<{ value: number; duration?: number }> = ({
   value,
@@ -296,44 +303,21 @@ const Index = () => {
             </div>
 
             <div className="grid gap-4 sm:gap-6 md:grid-cols-3 max-w-5xl mx-auto">
-              {/* Stat 1 */}
-              <div className="rounded-3xl border border-white/10 bg-background/60 backdrop-blur-xl p-5 sm:p-6 shadow-[0_18px_60px_rgba(15,23,42,0.45)] text-center flex flex-col items-center">
-                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-secondary/70 to-secondary/20">
-                  <Building2 className="h-5 w-5" />
-                </div>
-                <p className="text-2xl sm:text-3xl font-semibold">
-                  <CountUp value={50} />+
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {t("home.trustStatProjects")}
-                </p>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="rounded-3xl border border-white/10 bg-background/60 backdrop-blur-xl p-5 sm:p-6 shadow-[0_18px_60px_rgba(15,23,42,0.45)] text-center flex flex-col items-center">
-                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-secondary/70 to-secondary/20">
-                  <Layers className="h-5 w-5" />
-                </div>
-                <p className="text-2xl sm:text-3xl font-semibold">
-                  <CountUp value={5} />+
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {t("home.trustStatSectors")}
-                </p>
-              </div>
-
-              {/* Stat 3 */}
-              <div className="rounded-3xl border border-white/10 bg-background/60 backdrop-blur-xl p-5 sm:p-6 shadow-[0_18px_60px_rgba(15,23,42,0.45)] text-center flex flex-col items-center">
-                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-secondary/70 to-secondary/20">
-                  <Sparkles className="h-5 w-5" />
-                </div>
-                <p className="text-2xl sm:text-3xl font-semibold">
-                  <CountUp value={20} />+
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {t("home.trustStatManufacturers")}
-                </p>
-              </div>
+              <StatCard
+                icon={<Building2 className="h-5 w-5" />}
+                value={50}
+                label={t("home.trustStatProjects")}
+              />
+              <StatCard
+                icon={<Layers className="h-5 w-5" />}
+                value={5}
+                label={t("home.trustStatSectors")}
+              />
+              <StatCard
+                icon={<Sparkles className="h-5 w-5" />}
+                value={20}
+                label={t("home.trustStatManufacturers")}
+              />
             </div>
           </div>
         </section>

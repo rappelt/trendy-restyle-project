@@ -43,8 +43,14 @@ export const pl = {
     trustStatManufacturers: "Bezpośrednie relacje z producentami premium",
     trustTrustedBy: "Zaufanie klientów B2B",
     trustLogosNote: "Przykłady reprezentują typy zrealizowanych projektów i marek, z którymi współpracujemy przy projektach kontraktowych."
-
+    trustHeading: "ZAUFANIE",
+    trustTitle: "Liczby, które budują zaufanie",
+    trustSubtitle: "Wybrane projekty referencyjne w biurach, hotelarstwie i innych sektorach B2B.",
+    trustStatProjects: "Zrealizowane projekty B2B",
+    trustStatSectors: "Sektory (biura, hotele, healthcare itd.)",
+    trustStatManufacturers: "Producenci premium w naszej sieci",
   },
+
   manufacturers: {
     title: 'Nasi producenci',
     subtitle: 'Współpracujemy wyłącznie z renomowanymi producentami, którzy gwarantują najwyższą jakość, innowacyjny design i trwałość.',
