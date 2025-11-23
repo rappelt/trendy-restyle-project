@@ -1,47 +1,11 @@
 import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  Building2,
-  MessageCircle,
-  Layers,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, Building2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import footer from "@/components/footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroOffice from "@/assets/hero-office.jpg";
 import heroConsultation from "@/assets/hero-consultation.jpg";
-import { useEffect, useState, useRef, ReactNode } from "react";
-
-
-const CountUp: React.FC<{ value: number; duration?: number }> = ({
-  value,
-  duration = 1200,
-}) => {
-  const [display, setDisplay] = useState(0);
-
-  useEffect(() => {
-    let start: number | null = null;
-
-    const step = (timestamp: number) => {
-      if (start === null) start = timestamp;
-      const progress = Math.min((timestamp - start) / duration, 1);
-      const current = Math.round(progress * value);
-      setDisplay(current);
-
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
-    };
-
-    requestAnimationFrame(step);
-  }, [value, duration]);
-
-  return <span>{display.toLocaleString()}</span>;
-};
-
-
 
 const Index = () => {
   const { t } = useLanguage();
@@ -191,6 +155,111 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Architects Section */}
+        <section className="border-t border-border bg-muted/30">
+          <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] items-center">
+            {/* Text Column */}
+            <div className="space-y-6">
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                {t("home.architectsBadge")}
+              </p>
+              
+              <h2 className="text-2xl sm:text-3xl font-semibold leading-tight">
+                {t("home.architectsTitle")}
+              </h2>
+
+              <p className="text-sm sm:text-base text-muted-foreground">
+                {t("home.architectsIntro")}
+              </p>
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-secondary/30 flex items-center justify-center">
+                    <svg className="h-3 w-3 text-secondary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p className="text-sm sm:text-base">
+                    {t("home.architectsFeature1")}
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-secondary/30 flex items-center justify-center">
+                    <svg className="h-3 w-3 text-secondary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p className="text-sm sm:text-base">
+                    {t("home.architectsFeature2")}
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-secondary/30 flex items-center justify-center">
+                    <svg className="h-3 w-3 text-secondary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p className="text-sm sm:text-base">
+                    {t("home.architectsFeature3")}
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-secondary/30 flex items-center justify-center">
+                    <svg className="h-3 w-3 text-secondary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p className="text-sm sm:text-base">
+                    {t("home.architectsFeature4")}
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 space-y-2">
+                <p className="text-sm sm:text-base font-medium">
+                  {t("home.architectsClosing1")}
+                </p>
+                <p className="text-sm sm:text-base font-medium text-primary">
+                  {t("home.architectsClosing2")}
+                </p>
+              </div>
+
+              <Button asChild size="lg" className="mt-4">
+                <Link to="/contact">
+                  {t("home.architectsCta")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
+            {/* Visual Column */}
+            <div className="relative">
+              <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-muted/40 shadow-xl shadow-black/5">
+                <img
+                  src={heroConsultation}
+                  alt="Architecture planning consultation"
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+
+              <div className="absolute -bottom-6 -right-6 hidden md:block rounded-2xl border border-border bg-background/90 px-4 py-3 shadow-lg shadow-black/10">
+                <div className="flex items-center gap-2 mb-1">
+                  <Building2 className="h-4 w-4 text-primary" />
+                  <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    B2B · PLANNING SUPPORT
+                  </p>
+                </div>
+                <p className="text-sm font-medium">
+                  {t("home.architectsBadge")}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Projects / References Teaser */}
         <section className="border-t border-border bg-muted/20">
           <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] items-center">
@@ -285,44 +354,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-
-        {/* Proof of Trust / Kennzahlen */}
-        <section className="border-t border-border bg-background/60">
-          <div className="container mx-auto px-4 py-14 sm:py-16 lg:py-20">
-            <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
-              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                {t("home.trustHeading")}
-              </p>
-              <h2 className="text-2xl sm:text-3xl font-semibold">
-                {t("home.trustTitle")}
-              </h2>
-              <p className="text-sm sm:text-base text-muted-foreground">
-                {t("home.trustSubtitle")}
-              </p>
-            </div>
-
-            <div className="grid gap-4 sm:gap-6 md:grid-cols-3 max-w-5xl mx-auto">
-              <StatCard
-                icon={<Building2 className="h-5 w-5" />}
-                value={50}
-                label={t("home.trustStatProjects")}
-              />
-              <StatCard
-                icon={<Layers className="h-5 w-5" />}
-                value={5}
-                label={t("home.trustStatSectors")}
-              />
-              <StatCard
-                icon={<Sparkles className="h-5 w-5" />}
-                value={20}
-                label={t("home.trustStatManufacturers")}
-              />
-            </div>
-          </div>
-        </section>
-
-
 
         {/* Why Jaga Trendy */}
         <section className="border-t border-border bg-muted/30">
