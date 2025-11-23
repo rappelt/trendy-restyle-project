@@ -94,6 +94,14 @@ export const en = {
   contact: {
     title: 'Contact and consultations',
     subtitle: 'We support commercial clients in planning and implementing interior projects. Contact us for a personal consultation.',
+    
+    // Architects hook
+    architectsHookBadge: 'FOR ARCHITECTS',
+    architectsHookTitle: 'Strong Partners for Your Planning.',
+    architectsHookText: 'As an architect, you are responsible for functional, aesthetic and economic decisions. We support you exactly where it counts: in the early planning and tender phase. With verified premium manufacturers, reliable framework conditions and fast technical support, we ensure that your vision is implemented smoothly – without surprises, without time loss. Use our experience to position your project confidently and convincingly. We are ready to support you – simply share your project with us.',
+    architectsHookCta: 'Use the form below to introduce us to your project',
+    architectsHookResponse: 'We respond within 24 hours',
+    
     formTitle: 'Consultation request',
     formDesc: 'Fill out the form and we will contact you as soon as possible.',
     commercialOnly: 'For commercial clients only.',

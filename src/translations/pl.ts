@@ -94,6 +94,14 @@ export const pl = {
   contact: {
     title: 'Kontakt i konsultacje',
     subtitle: 'Wspieramy klientów komercyjnych w planowaniu i realizacji projektów wnętrz. Skontaktuj się z nami w celu osobistej konsultacji.',
+    
+    // Architects hook
+    architectsHookBadge: 'DLA ARCHITEKTÓW',
+    architectsHookTitle: 'Silni Partnerzy dla Twojego Planowania.',
+    architectsHookText: 'Jako architekt ponosisz odpowiedzialność za decyzje funkcjonalne, estetyczne i ekonomiczne. Wspieramy Cię dokładnie tam, gdzie to się liczy: na wczesnym etapie planowania i przetargu. Dzięki zweryfikowanym producentom premium, niezawodnym warunkom ramowym i szybkiemu wsparciu technicznemu zapewniamy, że Twoja wizja zostanie wdrożona płynnie – bez niespodzianek, bez straty czasu. Wykorzystaj nasze doświadczenie, aby pewnie i przekonująco pozycjonować swój projekt. Jesteśmy gotowi, aby Cię wesprzeć – po prostu podziel się z nami swoim przedsięwzięciem.',
+    architectsHookCta: 'Użyj formularza poniżej, aby przedstawić nam swój projekt',
+    architectsHookResponse: 'Odpowiadamy w ciągu 24 godzin',
+    
     formTitle: 'Zapytanie o konsultację',
     formDesc: 'Wypełnij formularz, a skontaktujemy się z Tobą tak szybko, jak to możliwe.',
     commercialOnly: 'Tylko dla klientów komercyjnych.',

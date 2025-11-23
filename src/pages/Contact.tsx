@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Building2, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowLeft, Building2, Mail, MapPin, Phone, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -53,6 +53,38 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
+          
+          {/* Architects Hook */}
+          <div className="mb-12 rounded-3xl border border-border bg-gradient-to-br from-primary/5 via-background to-secondary/5 p-6 sm:p-8 lg:p-10 shadow-lg">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="flex-shrink-0 mt-1">
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Compass className="h-6 w-6 text-primary" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-2">
+                  {t('contact.architectsHookBadge')}
+                </p>
+                <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-foreground">
+                  {t('contact.architectsHookTitle')}
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  {t('contact.architectsHookText')}
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between flex-wrap gap-4">
+              <p className="text-sm text-muted-foreground italic">
+                {t('contact.architectsHookCta')}
+              </p>
+              <div className="flex items-center gap-2 text-sm font-medium text-primary">
+                <Compass className="h-4 w-4" />
+                <span>{t('contact.architectsHookResponse')}</span>
+              </div>
+            </div>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <Card className="shadow-[var(--shadow-medium)]">

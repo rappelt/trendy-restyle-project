@@ -94,6 +94,14 @@ export const de = {
   contact: {
     title: 'Kontakt und Beratung',
     subtitle: 'Wir unterstützen gewerbliche Kunden bei der Planung und Umsetzung von Einrichtungsprojekten. Kontaktieren Sie uns für eine persönliche Beratung.',
+    
+    // Architects hook
+    architectsHookBadge: 'FÜR ARCHITEKTEN',
+    architectsHookTitle: 'Starke Partner für Ihre Planung.',
+    architectsHookText: 'Als Architekt tragen Sie Verantwortung für funktionale, ästhetische und wirtschaftliche Entscheidungen. Wir unterstützen Sie genau dort, wo es zählt: in der frühen Planungs- und Ausschreibungsphase. Mit geprüften Premium-Herstellern, verlässlichen Rahmenkonditionen und schneller technischer Unterstützung sorgen wir dafür, dass Ihre Vision reibungslos umgesetzt wird – ohne Überraschungen, ohne Zeitverlust. Nutzen Sie unsere Erfahrung, um Ihr Projekt sicher und überzeugend zu positionieren. Wir stehen bereit, um Sie zu unterstützen – teilen Sie uns einfach kurz Ihr Vorhaben mit.',
+    architectsHookCta: 'Nutzen Sie das Formular unten, um uns Ihr Projekt vorzustellen',
+    architectsHookResponse: 'Wir antworten innerhalb von 24h',
+    
     formTitle: 'Beratungsanfrage',
     formDesc: 'Füllen Sie das Formular aus und wir werden uns so schnell wie möglich bei Ihnen melden.',
     commercialOnly: 'Nur für gewerbliche Kunden.',
