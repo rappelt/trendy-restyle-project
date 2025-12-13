@@ -162,8 +162,26 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Contact Info */}
+            {/* Voice Chat Widget - positioned after form */}
             <div className="space-y-8">
+              <div className="text-center mb-4">
+                <p className="text-sm text-muted-foreground">
+                  {t('contact.voiceChatIntro')}
+                </p>
+              </div>
+              <div className="max-w-xl mx-auto">
+                <VoiceChat
+                  agentId="agent_1601kcaqkqkwf1qrt795gjenycvr"
+                  agentName={t('contact.voiceAgentName')}
+                  description={t('contact.voiceAgentDesc')}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="mt-16 pt-12 border-t border-border">
+            <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <Card className="shadow-[var(--shadow-medium)]">
                 <CardHeader>
                   <CardTitle className="text-2xl">{t('contact.contactInfo')}</CardTitle>
@@ -189,8 +207,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-foreground">{t('contact.email')}</h3>
-                      <a 
-                        href="mailto:gdansk@jagatrendy.pl" 
+                      <a
+                        href="mailto:gdansk@jagatrendy.pl"
                         className="text-accent hover:underline"
                       >
                         gdansk@jagatrendy.pl
@@ -237,22 +255,6 @@ const Contact = () => {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-
-          {/* Voice Chat Widget - positioned after form */}
-          <div className="mt-16 pt-12 border-t border-border">
-            <div className="text-center mb-4">
-              <p className="text-sm text-muted-foreground">
-                {t('contact.voiceChatIntro')}
-              </p>
-            </div>
-            <div className="max-w-xl mx-auto">
-              <VoiceChat
-                agentId="agent_1601kcaqkqkwf1qrt795gjenycvr"
-                agentName={t('contact.voiceAgentName')}
-                description={t('contact.voiceAgentDesc')}
-              />
             </div>
           </div>
         </div>
