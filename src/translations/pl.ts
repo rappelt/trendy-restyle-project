@@ -48,6 +48,7 @@ export const pl = {
     needHelp: 'Potrzebujesz pomocy w wyborze?',
     needHelpDesc: 'Nasi eksperci chętnie doradzą przy wyborze odpowiednich mebli do Twojego projektu.',
     categories: {
+      officeSystems: 'Systemy Biurowe',
       officeFurniture: 'Meble Biurowe',
       officeChairsPremium: 'Krzesła i Fotele Biurowe Premium',
       officeChairs: 'Krzesła i Fotele Biurowe',

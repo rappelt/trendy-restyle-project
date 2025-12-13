@@ -48,6 +48,7 @@ export const en = {
     needHelp: 'Need help choosing?',
     needHelpDesc: 'Our experts are happy to advise you on choosing the right furniture for your project.',
     categories: {
+      officeSystems: 'Office Systems',
       officeFurniture: 'Office Furniture',
       officeChairsPremium: 'Premium Office Chairs and Armchairs',
       officeChairs: 'Office Chairs and Armchairs',
