@@ -169,7 +169,7 @@ const Contact = () => {
                   {t('contact.voiceChatIntro')}
                 </h3>
                 <p className="text-base text-orange-700 dark:text-orange-300">
-                  Schnelle Antworten durch KI-gestützte Beratung
+                  {t('contact.voiceChatSubtitle')}
                 </p>
               </div>
               <div className="max-w-xl mx-auto">

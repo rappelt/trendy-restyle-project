@@ -133,6 +133,7 @@ export const de = {
 
     // Voice Chat
     voiceChatIntro: 'Oder probiere einfach mal unseren Voice Assistant aus',
+    voiceChatSubtitle: 'Schnelle Antworten durch KI-gestützte Beratung',
     voiceAgentName: 'Jaga Trendy Berater',
     voiceAgentDesc: 'Tippe, um das Gespräch zu starten',
   },

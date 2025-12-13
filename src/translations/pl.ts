@@ -133,6 +133,7 @@ export const pl = {
 
     // Voice Chat
     voiceChatIntro: 'Lub po prostu wypróbuj naszego asystenta głosowego',
+    voiceChatSubtitle: 'Szybkie odpowiedzi dzięki doradztwie opartemu na AI',
     voiceAgentName: 'Doradca Jaga Trendy',
     voiceAgentDesc: 'Dotknij, aby rozpocząć rozmowę',
   },
