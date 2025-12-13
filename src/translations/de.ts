@@ -127,6 +127,11 @@ export const de = {
     comprehensive: 'Komplettlösungen aus einer Hand',
     longterm: 'Langfristige Zusammenarbeit',
     phoneDesc: 'Kontaktieren Sie uns per E-Mail, um einen Termin zu vereinbaren',
+
+    // Voice Chat
+    voiceChatIntro: 'Oder probiere einfach mal unseren Voice Assistant aus',
+    voiceAgentName: 'Jaga Trendy Berater',
+    voiceAgentDesc: 'Tippe, um das Gespräch zu starten',
   },
   footer: {
     imprint: "Impressum",

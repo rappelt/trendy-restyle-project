@@ -127,6 +127,11 @@ export const pl = {
     comprehensive: 'Kompleksowe rozwiązania z jednego źródła',
     longterm: 'Długoterminowa współpraca',
     phoneDesc: 'Skontaktuj się z nami e-mailem, aby umówić spotkanie',
+
+    // Voice Chat
+    voiceChatIntro: 'Lub po prostu wypróbuj naszego asystenta głosowego',
+    voiceAgentName: 'Doradca Jaga Trendy',
+    voiceAgentDesc: 'Dotknij, aby rozpocząć rozmowę',
   },
   footer: {
     imprint: "Stopka",

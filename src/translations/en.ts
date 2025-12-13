@@ -127,6 +127,11 @@ export const en = {
     comprehensive: 'Comprehensive solutions from one source',
     longterm: 'Long-term cooperation',
     phoneDesc: 'Contact us by email to schedule a meeting',
+
+    // Voice Chat
+    voiceChatIntro: 'Or simply try our voice assistant',
+    voiceAgentName: 'Jaga Trendy Advisor',
+    voiceAgentDesc: 'Tap to start the conversation',
   },
   footer: {
     imprint: "Imprint",

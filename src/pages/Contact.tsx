@@ -93,18 +93,15 @@ const Contact = () => {
           {/* Voice Chat Widget */}
           <div className="mb-12">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold mb-3 text-foreground">
-                {t('contact.voiceChatTitle') || 'Sprechen Sie mit unserem AI-Assistenten'}
-              </h2>
-              <p className="text-muted-foreground">
-                {t('contact.voiceChatDesc') || 'Starten Sie eine Sprachkonversation für schnelle Antworten auf Ihre Fragen'}
+              <p className="text-lg text-muted-foreground">
+                {t('contact.voiceChatIntro')}
               </p>
             </div>
             <div className="max-w-2xl mx-auto">
               <VoiceChat
                 agentId="agent_1601kcaqkqkwf1qrt795gjenycvr"
-                agentName={t('contact.voiceAgentName') || 'Jaga Trendy Berater'}
-                description={t('contact.voiceAgentDesc') || 'Tippen Sie, um das Gespräch zu starten'}
+                agentName={t('contact.voiceAgentName')}
+                description={t('contact.voiceAgentDesc')}
               />
             </div>
           </div>
