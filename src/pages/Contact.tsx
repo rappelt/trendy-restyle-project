@@ -6,28 +6,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Header from "@/components/Header";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { VoiceChat } from "@/components/ui/voice-chat";
 
 const Contact = () => {
   const { toast } = useToast();
   const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    // Load ElevenLabs ConvAI widget script
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
-    script.async = true;
-    script.type = 'text/javascript';
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script on component unmount
-      document.body.removeChild(script);
-    };
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -100,6 +87,25 @@ const Contact = () => {
                 <Compass className="h-4 w-4" />
                 <span>{t('contact.architectsHookResponse')}</span>
               </div>
+            </div>
+          </div>
+
+          {/* Voice Chat Widget */}
+          <div className="mb-12">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl font-bold mb-3 text-foreground">
+                {t('contact.voiceChatTitle') || 'Sprechen Sie mit unserem AI-Assistenten'}
+              </h2>
+              <p className="text-muted-foreground">
+                {t('contact.voiceChatDesc') || 'Starten Sie eine Sprachkonversation für schnelle Antworten auf Ihre Fragen'}
+              </p>
+            </div>
+            <div className="max-w-2xl mx-auto">
+              <VoiceChat
+                agentId="agent_1601kcaqkqkwf1qrt795gjenycvr"
+                agentName={t('contact.voiceAgentName') || 'Jaga Trendy Berater'}
+                description={t('contact.voiceAgentDesc') || 'Tippen Sie, um das Gespräch zu starten'}
+              />
             </div>
           </div>
 
@@ -254,9 +260,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {/* ElevenLabs ConvAI Widget */}
-      <elevenlabs-convai agent-id="agent_1601kcaqkqkwf1qrt795gjenycvr"></elevenlabs-convai>
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-8 px-4 mt-12">
