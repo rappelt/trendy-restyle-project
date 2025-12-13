@@ -90,22 +90,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Voice Chat Widget */}
-          <div className="mb-12">
-            <div className="text-center mb-6">
-              <p className="text-lg text-muted-foreground">
-                {t('contact.voiceChatIntro')}
-              </p>
-            </div>
-            <div className="max-w-2xl mx-auto">
-              <VoiceChat
-                agentId="agent_1601kcaqkqkwf1qrt795gjenycvr"
-                agentName={t('contact.voiceAgentName')}
-                description={t('contact.voiceAgentDesc')}
-              />
-            </div>
-          </div>
-
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <Card className="shadow-[var(--shadow-medium)]">
@@ -253,6 +237,22 @@ const Contact = () => {
                   </ul>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+
+          {/* Voice Chat Widget - positioned after form */}
+          <div className="mt-16 pt-12 border-t border-border">
+            <div className="text-center mb-4">
+              <p className="text-sm text-muted-foreground">
+                {t('contact.voiceChatIntro')}
+              </p>
+            </div>
+            <div className="max-w-xl mx-auto">
+              <VoiceChat
+                agentId="agent_1601kcaqkqkwf1qrt795gjenycvr"
+                agentName={t('contact.voiceAgentName')}
+                description={t('contact.voiceAgentDesc')}
+              />
             </div>
           </div>
         </div>

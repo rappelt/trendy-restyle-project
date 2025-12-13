@@ -38,9 +38,13 @@ const Index = () => {
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
-                <Button asChild size="lg">
-                  <Link to="/manufacturers">
-                    {t("home.discoverManufacturers")}
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg"
+                >
+                  <Link to="/contact">
+                    {t("home.requestProject")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -51,7 +55,9 @@ const Index = () => {
                   size="lg"
                   className="border-border"
                 >
-                  <Link to="/contact">{t("home.requestProject")}</Link>
+                  <Link to="/manufacturers">
+                    {t("home.discoverManufacturers")}
+                  </Link>
                 </Button>
               </div>
             </div>
