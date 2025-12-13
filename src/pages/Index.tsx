@@ -41,7 +41,7 @@ const Index = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-blue-600 hover:bg-orange-500 text-white shadow-lg border-2 border-red-500 transition-all duration-300"
+                  className="bg-blue-600 hover:bg-orange-500 hover:scale-105 text-white shadow-lg border-2 border-red-500 transition-all duration-300 hover:shadow-xl"
                 >
                   <Link to="/contact">
                     {t("home.requestProject")}
@@ -52,7 +52,7 @@ const Index = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-blue-400 hover:bg-blue-500 text-white border-0"
+                  className="bg-blue-400 hover:bg-orange-500 hover:scale-105 text-white border-0 transition-all duration-300 hover:shadow-xl"
                 >
                   <Link to="/manufacturers">
                     {t("home.discoverManufacturers")}
