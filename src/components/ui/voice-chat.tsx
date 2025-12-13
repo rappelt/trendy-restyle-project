@@ -72,8 +72,8 @@ export function VoiceChat({
       <div className="flex flex-col items-center gap-6">
         {/* Animated Microphone Icon */}
         <div className="relative">
-          <div className="relative h-32 w-32 rounded-full bg-gradient-to-br from-accent/20 to-accent/5 p-1 shadow-lg">
-            <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-background shadow-inner">
+          <div className="relative h-32 w-32 rounded-full bg-gradient-to-br from-orange-400 to-orange-500 p-1 shadow-lg">
+            <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white shadow-inner">
               <AnimatePresence mode="wait">
                 {isCallActive ? (
                   <motion.div
@@ -93,9 +93,9 @@ export function VoiceChat({
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
-                      className="absolute inset-0 rounded-full bg-accent/20"
+                      className="absolute inset-0 rounded-full bg-orange-400/30"
                     />
-                    <MicIcon className="relative h-16 w-16 text-accent" />
+                    <MicIcon className="relative h-16 w-16 text-orange-500" />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -104,7 +104,7 @@ export function VoiceChat({
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.8, opacity: 0 }}
                   >
-                    <MicIcon className="h-16 w-16 text-muted-foreground" />
+                    <MicIcon className="h-16 w-16 text-orange-500" />
                   </motion.div>
                 )}
               </AnimatePresence>

@@ -163,10 +163,13 @@ const Contact = () => {
             </Card>
 
             {/* Voice Chat Widget - positioned after form */}
-            <div className="space-y-8">
-              <div className="text-center mb-4">
-                <p className="text-sm text-muted-foreground">
+            <div className="space-y-8 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950 dark:to-orange-900 p-8 rounded-3xl border-2 border-orange-300 shadow-xl">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl sm:text-3xl font-bold text-orange-600 dark:text-orange-400 mb-3">
                   {t('contact.voiceChatIntro')}
+                </h3>
+                <p className="text-base text-orange-700 dark:text-orange-300">
+                  Schnelle Antworten durch KI-gestützte Beratung
                 </p>
               </div>
               <div className="max-w-xl mx-auto">
