@@ -45,6 +45,8 @@ export const de = {
     title: 'Unsere Hersteller',
     subtitle: 'Wir arbeiten ausschließlich mit renommierten Herstellern zusammen, die höchste Qualität, innovatives Design und Langlebigkeit garantieren.',
     visitWebsite: 'Website besuchen',
+    projectHintShort: 'Premium B2B',
+    projectHint: 'Geeignet für Projekte',
     needHelp: 'Benötigen Sie Hilfe bei der Auswahl?',
     needHelpDesc: 'Unsere Experten beraten Sie gerne bei der Auswahl der richtigen Möbel für Ihr Projekt.',
     categories: {

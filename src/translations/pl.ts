@@ -45,6 +45,8 @@ export const pl = {
     title: 'Nasi producenci',
     subtitle: 'Współpracujemy wyłącznie z renomowanymi producentami, którzy gwarantują najwyższą jakość, innowacyjny design i trwałość.',
     visitWebsite: 'Odwiedź stronę',
+    projectHintShort: 'Premium B2B',
+    projectHint: 'Odpowiednie do projektów',
     needHelp: 'Potrzebujesz pomocy w wyborze?',
     needHelpDesc: 'Nasi eksperci chętnie doradzą przy wyborze odpowiednich mebli do Twojego projektu.',
     categories: {

@@ -45,6 +45,8 @@ export const en = {
     title: 'Our manufacturers',
     subtitle: 'We work exclusively with renowned manufacturers who guarantee the highest quality, innovative design and durability.',
     visitWebsite: 'Visit website',
+    projectHintShort: 'Premium B2B',
+    projectHint: 'Suitable for projects',
     needHelp: 'Need help choosing?',
     needHelpDesc: 'Our experts are happy to advise you on choosing the right furniture for your project.',
     categories: {
