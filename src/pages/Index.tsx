@@ -41,7 +41,7 @@ const Index = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg"
+                  className="bg-blue-600 hover:bg-orange-500 text-white shadow-lg border-2 border-red-500 transition-all duration-300"
                 >
                   <Link to="/contact">
                     {t("home.requestProject")}
@@ -51,9 +51,8 @@ const Index = () => {
 
                 <Button
                   asChild
-                  variant="outline"
                   size="lg"
-                  className="border-border"
+                  className="bg-blue-400 hover:bg-blue-500 text-white border-0"
                 >
                   <Link to="/manufacturers">
                     {t("home.discoverManufacturers")}
