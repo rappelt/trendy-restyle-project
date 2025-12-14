@@ -174,7 +174,7 @@ const Contact = () => {
               </div>
               <div className="max-w-xl mx-auto">
                 <VoiceChat
-                  agentId="agent_1601kcaqkqkwf1qrt795gjenycvr"
+                  agentId="agent_7001kcehmjpaey3b80ex81k2gvdx"
                   agentName={t('contact.voiceAgentName')}
                   description={t('contact.voiceAgentDesc')}
                 />
