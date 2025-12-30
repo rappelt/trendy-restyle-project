@@ -15,6 +15,7 @@ interface VoiceChatProps {
   agentName?: string
   description?: string
   className?: string
+  language?: string
 }
 
 export function VoiceChat({
@@ -22,9 +23,20 @@ export function VoiceChat({
   agentName = "Customer Support",
   description = "Tap to start voice chat",
   className,
+  language = "en",
 }: VoiceChatProps) {
   const [agentState, setAgentState] = useState<AgentState>("disconnected")
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
+
+  // Map language codes to full language names for ElevenLabs
+  const getLanguageName = (lang: string): string => {
+    const languageMap: { [key: string]: string } = {
+      'pl': 'Polish',
+      'de': 'German',
+      'en': 'English'
+    }
+    return languageMap[lang] || 'English'
+  }
 
   const conversation = useConversation({
     onConnect: () => console.log("Connected"),
@@ -40,9 +52,17 @@ export function VoiceChat({
     try {
       setErrorMessage(null)
       await navigator.mediaDevices.getUserMedia({ audio: true })
+
+      const languageName = getLanguageName(language)
+
       await conversation.startSession({
         agentId: agentId,
         connectionType: "webrtc",
+        overrides: {
+          agent: {
+            language: languageName,
+          }
+        },
         onStatusChange: (status) => setAgentState(status.status),
       })
     } catch (error) {
@@ -52,7 +72,7 @@ export function VoiceChat({
         setErrorMessage("Bitte aktiviere die Mikrofon-Berechtigung in deinem Browser.")
       }
     }
-  }, [conversation, agentId])
+  }, [conversation, agentId, language])
 
   const handleCall = useCallback(() => {
     if (agentState === "disconnected" || agentState === null) {

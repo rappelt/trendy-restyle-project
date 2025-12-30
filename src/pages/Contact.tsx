@@ -13,7 +13,7 @@ import { VoiceChat } from "@/components/ui/voice-chat";
 
 const Contact = () => {
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -177,6 +177,7 @@ const Contact = () => {
                   agentId="agent_7001kcehmjpaey3b80ex81k2gvdx"
                   agentName={t('contact.voiceAgentName')}
                   description={t('contact.voiceAgentDesc')}
+                  language={language}
                 />
               </div>
             </div>
