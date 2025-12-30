@@ -23,7 +23,7 @@ export function VoiceChat({
   agentName = "Customer Support",
   description = "Tap to start voice chat",
   className,
-  language = "en",
+  language = "en", // Default fallback
 }: VoiceChatProps) {
   const [agentState, setAgentState] = useState<AgentState>("disconnected")
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
@@ -46,24 +46,32 @@ export function VoiceChat({
       setErrorMessage(null)
       await navigator.mediaDevices.getUserMedia({ audio: true })
 
-      // Log the language being passed (ISO code: pl, de, en)
       console.log(`Starting ElevenLabs session with language: ${language}`)
 
       await conversation.startSession({
-        agentId: agentId,
+        agentId,
         connectionType: "webrtc",
         onStatusChange: (status) => setAgentState(status.status),
-        // Provide a client tool that returns the user's language ISO code
-        // ElevenLabs expects: pl, en, de (not German/Polish/English)
+
+        // ✨ Sprachkonfiguration für ElevenLabs
         clientTools: {
-          get_user_language: () => language
-        }
+          // direkt übergeben
+          language: language,
+
+          // Reihenfolge der unterstützten Sprachen
+          supportedLanguages: ["de", "en", "pl"],
+
+          // Falls ElevenLabs zusätzliche Erkennung nutzen soll
+          get_user_language: () => language,
+        },
       })
     } catch (error) {
       console.error("Error starting conversation:", error)
       setAgentState("disconnected")
       if (error instanceof DOMException && error.name === "NotAllowedError") {
-        setErrorMessage("Bitte aktiviere die Mikrofon-Berechtigung in deinem Browser.")
+        setErrorMessage(
+          "Bitte aktiviere die Mikrofon-Berechtigung in deinem Browser."
+        )
       }
     }
   }, [conversation, agentId, language])
@@ -79,10 +87,16 @@ export function VoiceChat({
   }, [agentState, conversation, startConversation])
 
   const isCallActive = agentState === "connected"
-  const isTransitioning = agentState === "connecting" || agentState === "disconnecting"
+  const isTransitioning =
+    agentState === "connecting" || agentState === "disconnecting"
 
   return (
-    <Card className={cn("flex w-full flex-col items-center justify-center overflow-hidden p-8", className)}>
+    <Card
+      className={cn(
+        "flex w-full flex-col items-center justify-center overflow-hidden p-8",
+        className
+      )}
+    >
       <div className="flex flex-col items-center gap-6">
         {/* Animated Microphone Icon */}
         <div className="relative">
