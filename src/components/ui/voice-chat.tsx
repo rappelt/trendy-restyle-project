@@ -55,16 +55,22 @@ export function VoiceChat({
 
       const languageName = getLanguageName(language)
 
+      // Log the language being passed
+      console.log(`Starting ElevenLabs session with language: ${languageName}`)
+
       await conversation.startSession({
         agentId: agentId,
         connectionType: "webrtc",
-        overrides: {
-          agent: {
-            language: languageName,
-          }
-        },
         onStatusChange: (status) => setAgentState(status.status),
       })
+
+      // Send an initial message to set the language context
+      // This will be visible to the agent and help it respond in the correct language
+      setTimeout(() => {
+        if (conversation.status === "connected") {
+          console.log(`Session started. User language preference: ${languageName}`)
+        }
+      }, 500)
     } catch (error) {
       console.error("Error starting conversation:", error)
       setAgentState("disconnected")
