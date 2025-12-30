@@ -31,9 +31,9 @@ export function VoiceChat({
   // Get language-specific first message (static definition)
   const getFirstMessage = useCallback((lang: string) => {
     const messages: Record<string, string> = {
-      de: "Hallo! Wie kann ich dir helfen?",
-      en: "Hello! How can I help you?",
-      pl: "Cześć! Jak mogę ci pomóc?",
+      de: "Willkommen bei JAGA. Ich bin ein Projektassistent. Bitte beschreiben Sie mir kurz Ihr Projekt, damit ich eine Vorstellung davon habe, worum es geht. ",
+      en: "Welcome to JAGA. I'm a project assistant. Please briefly describe your project so I have an idea of ​​what it's about.",
+      pl: "Witamy w JAGA. Nazywam się Agnieszka i jestem asystentką projektu. Proszę krótko opisać swój projekt, abym miała pojęcie, czego dotyczy.",
     }
     return messages[lang] || messages["en"]
   }, [])
