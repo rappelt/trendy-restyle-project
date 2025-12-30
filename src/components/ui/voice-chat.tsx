@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useState } from "react"
+import { useCallback, useState, useMemo } from "react"
 import { useConversation } from "@elevenlabs/react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Loader2Icon, PhoneIcon, PhoneOffIcon, MicIcon } from "lucide-react"
@@ -28,18 +28,37 @@ export function VoiceChat({
   const [agentState, setAgentState] = useState<AgentState>("disconnected")
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
-  const conversation = useConversation({
+  // Get language-specific first message (static definition)
+  const getFirstMessage = useCallback((lang: string) => {
+    const messages: Record<string, string> = {
+      de: "Hallo! Wie kann ich dir helfen?",
+      en: "Hello! How can I help you?",
+      pl: "Cześć! Jak mogę ci pomóc?",
+    }
+    return messages[lang] || messages["en"]
+  }, [])
+
+  // Memoize conversation config to update when language changes
+  const conversationConfig = useMemo(() => ({
     onConnect: () => {
       console.log("Connected")
       console.log(`Session started with language: ${language}`)
     },
     onDisconnect: () => console.log("Disconnected"),
-    onMessage: (message) => console.log("Message:", message),
-    onError: (error) => {
+    onMessage: (message: unknown) => console.log("Message:", message),
+    onError: (error: unknown) => {
       console.error("Error:", error)
       setAgentState("disconnected")
     },
-  })
+    overrides: {
+      agent: {
+        language: language,
+        firstMessage: getFirstMessage(language),
+      },
+    },
+  }), [language, getFirstMessage])
+
+  const conversation = useConversation(conversationConfig)
 
   const startConversation = useCallback(async () => {
     try {
@@ -52,18 +71,6 @@ export function VoiceChat({
         agentId,
         connectionType: "webrtc",
         onStatusChange: (status) => setAgentState(status.status),
-
-        // ✨ Sprachkonfiguration für ElevenLabs
-        clientTools: {
-          // direkt übergeben
-          language: language,
-
-          // Reihenfolge der unterstützten Sprachen
-          supportedLanguages: ["de", "en", "pl"],
-
-          // Falls ElevenLabs zusätzliche Erkennung nutzen soll
-          get_user_language: () => language,
-        },
       })
     } catch (error) {
       console.error("Error starting conversation:", error)
