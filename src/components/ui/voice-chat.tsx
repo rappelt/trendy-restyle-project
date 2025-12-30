@@ -28,18 +28,11 @@ export function VoiceChat({
   const [agentState, setAgentState] = useState<AgentState>("disconnected")
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
-  // Map language codes to full language names for ElevenLabs
-  const getLanguageName = (lang: string): string => {
-    const languageMap: { [key: string]: string } = {
-      'pl': 'Polish',
-      'de': 'German',
-      'en': 'English'
-    }
-    return languageMap[lang] || 'English'
-  }
-
   const conversation = useConversation({
-    onConnect: () => console.log("Connected"),
+    onConnect: () => {
+      console.log("Connected")
+      console.log(`Session started with language: ${language}`)
+    },
     onDisconnect: () => console.log("Disconnected"),
     onMessage: (message) => console.log("Message:", message),
     onError: (error) => {
@@ -53,24 +46,19 @@ export function VoiceChat({
       setErrorMessage(null)
       await navigator.mediaDevices.getUserMedia({ audio: true })
 
-      const languageName = getLanguageName(language)
-
-      // Log the language being passed
-      console.log(`Starting ElevenLabs session with language: ${languageName}`)
+      // Log the language being passed (ISO code: pl, de, en)
+      console.log(`Starting ElevenLabs session with language: ${language}`)
 
       await conversation.startSession({
         agentId: agentId,
         connectionType: "webrtc",
         onStatusChange: (status) => setAgentState(status.status),
-      })
-
-      // Send an initial message to set the language context
-      // This will be visible to the agent and help it respond in the correct language
-      setTimeout(() => {
-        if (conversation.status === "connected") {
-          console.log(`Session started. User language preference: ${languageName}`)
+        // Provide a client tool that returns the user's language ISO code
+        // ElevenLabs expects: pl, en, de (not German/Polish/English)
+        clientTools: {
+          get_user_language: () => language
         }
-      }, 500)
+      })
     } catch (error) {
       console.error("Error starting conversation:", error)
       setAgentState("disconnected")
